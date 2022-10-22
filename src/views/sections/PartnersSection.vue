@@ -11,7 +11,11 @@
 				businesses revenue with NFT holders
 			</p>
 
-			<button style="width: 215px; height: 37px"></button>
+			<ButtonPrimary
+				text="Jump Start Your Earnings"
+				:width="'21.5rem'"
+				bg-color="blue"
+			/>
 		</div>
 
 		<div class="partners-section__right--image">
@@ -19,6 +23,15 @@
 		</div>
 	</div>
 </template>
+
+<script>
+	import ButtonPrimary from "@/components/ButtonPrimary.vue";
+
+	export default {
+		name: "PartnersSection",
+		components: { ButtonPrimary },
+	};
+</script>
 
 <style lang="scss" scoped>
 	.partners-section {
@@ -58,7 +71,6 @@
 		&__right--image {
 			display: flex;
 			align-items: flex-end;
-			// height: 100%;
 
 			img {
 				width: auto;

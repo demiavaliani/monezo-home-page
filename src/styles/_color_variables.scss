@@ -1,3 +1,61 @@
+/* STATIC COLORS */
 $monezo-white: #ffffff;
 $monezo-black: #000000;
 $monezo-green: #5ce517;
+$monezo-light-grey: #999999;
+$monezo-dark-grey: #666666;
+
+/* GRADIENTS */
+$monezo-gradient-button-primary-bg-blue-hover: linear-gradient(
+	90deg,
+	#6dea2e 0%,
+	#bef6a2 100%
+);
+
+$monezo-gradient-button-primary-bg-blue-pressed: linear-gradient(
+	90deg,
+	#54d115 0%,
+	#8eef5d 100%
+);
+
+$monezo-gradient-button-primary-bg-red-hover: linear-gradient(
+	90deg,
+	#5d75ef 0%,
+	#8b9cf3 100%
+);
+
+$monezo-gradient-button-primary-bg-red-pressed: linear-gradient(
+	90deg,
+	#2e4dea 0%,
+	#5d75ee 100%
+);
+
+$monezo-gradient-button-primary-bg-brown-hover: linear-gradient(
+	90deg,
+	#8e5def 0%,
+	#ae8bf3 100%
+);
+
+$monezo-gradient-button-primary-bg-brown-pressed: linear-gradient(
+	90deg,
+	#6d2eea 0%,
+	#8e5dee 100%
+);
+
+$monezo-gradient-button-navigation-static: linear-gradient(
+	90deg,
+	#f84984 0%,
+	#f08e35 100%
+);
+
+$monezo-gradient-button-navigation-hover: linear-gradient(
+	90deg,
+	#f96c9b 0%,
+	#f29f54 100%
+);
+
+$monezo-gradient-button-navigation-pressed: linear-gradient(
+	90deg,
+	#f61863 0%,
+	#df7311 100%
+);

@@ -1,3 +1,30 @@
 p {
 	margin: 0;
 }
+
+.btn-global-override {
+	position: relative;
+	border: 1px solid $monezo-black;
+	color: $monezo-black;
+	font-family: "Poppins";
+	font-size: 1.4rem;
+	font-weight: 500;
+	cursor: pointer;
+	z-index: 1;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: opacity 0.2s ease-out 0s;
+		opacity: 0;
+	}
+
+	&:hover::before {
+		opacity: 1;
+	}
+}
