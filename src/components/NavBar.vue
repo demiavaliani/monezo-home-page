@@ -15,10 +15,21 @@
 		</div>
 
 		<div class="nav-bar__button">
-			<button></button>
+			<ButtonNavigation text="All-in-One App" :width="'14.4rem'" />
 		</div>
 	</div>
 </template>
+
+<script>
+	import ButtonNavigation from "./ButtonNavigation.vue";
+
+	export default {
+		name: "NavBar",
+		components: {
+			ButtonNavigation,
+		},
+	};
+</script>
 
 <style lang="scss" scoped>
 	.nav-bar {
@@ -58,13 +69,6 @@
 
 		&__button {
 			width: 20%;
-
-			button {
-				width: 14.4rem;
-				height: 3.7rem;
-				padding: 0;
-				border-radius: 53px;
-			}
 		}
 	}
 </style>
