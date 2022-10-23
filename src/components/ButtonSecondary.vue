@@ -44,11 +44,11 @@
 
 		&::before {
 			border-radius: 9px;
-			background: $monezo-light-grey;
+			background: $monezo-dusty-grey;
 		}
 
 		&:active::before {
-			background: $monezo-dark-grey;
+			background: $monezo-dove-grey;
 		}
 	}
 </style>

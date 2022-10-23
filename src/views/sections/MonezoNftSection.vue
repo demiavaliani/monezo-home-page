@@ -1,6 +1,6 @@
 <template>
 	<div class="monezo-nft-section">
-		<div class="monezo-nft-section__left--image">
+		<div class="monezo-nft-section__left-image">
 			<img src="@/assets/images/monezo-nft-section monkers-group.png" />
 			<!-- <img src="@/assets/images/monezo-nft-section-monker-100.png" /> -->
 			<!-- <img src="@/assets/images/monezo-nft-section-monker-1k.png" /> -->
@@ -8,14 +8,14 @@
 			<!-- <img src="@/assets/images/monezo-nft-section-monker-10k.png" /> -->
 		</div>
 
-		<div class="monezo-nft-section__right--description">
-			<p class="text text__top">More than an investment platform</p>
+		<div class="monezo-nft-section__right-description">
+			<p class="text text--top">More than an investment platform</p>
 
-			<p class="text text__large">
+			<p class="text text--large">
 				Start your passive income Journey with Monezo NFT
 			</p>
 
-			<p class="text text__small">
+			<p class="text text--small">
 				With Monezo platform you get access to Monezo Yieldful NFT, which are
 				backed by stable income from real world assets and business revenue.
 				<br />
@@ -43,22 +43,24 @@
 	.monezo-nft-section {
 		display: flex;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
+		min-height: 100vh;
 		background: linear-gradient(261.77deg, #f24981 0%, #fb92b5 100%);
 
-		&__left--image {
+		&__left-image {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			min-width: 60%;
-			height: 100vh;
+			height: 100%;
+			min-height: 100vh;
 
 			img {
 				width: 49vw;
 			}
 		}
 
-		&__right--description {
+		&__right-description {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -68,7 +70,7 @@
 				margin-bottom: 3.6rem;
 				text-align: left;
 
-				&__top {
+				&--top {
 					margin-bottom: 1.8rem;
 					font-family: "Poppins";
 					font-size: 1.8rem;
@@ -76,14 +78,14 @@
 					color: $monezo-white;
 				}
 
-				&__large {
+				&--large {
 					font-family: "Syne";
 					font-size: 3.2rem;
 					font-weight: 700;
-					color: $monezo-blue;
+					color: $monezo-persian-blue;
 				}
 
-				&__small {
+				&--small {
 					font-family: "Poppins";
 					font-size: 1.8rem;
 					font-weight: 400;

@@ -1,17 +1,17 @@
 <template>
 	<div class="nav-bar">
 		<div class="nav-bar__title">
-			<a href="#" class="nav-bar__title--text">Monezo</a>
+			<a href="#" class="nav-bar__title-text">Monezo</a>
 		</div>
 
 		<div class="nav-bar__items">
-			<a href="#" class="nav-bar__items--text">Marketplace</a>
-			<a href="#" class="nav-bar__items--text">Incubator</a>
-			<a href="#" class="nav-bar__items--text">Institutional</a>
-			<a href="#" class="nav-bar__items--text">How It Works</a>
-			<a href="#" class="nav-bar__items--text">About Us</a>
-			<a href="#" class="nav-bar__items--text">Academy</a>
-			<a href="#" class="nav-bar__items--text">Blog</a>
+			<a href="#" class="nav-bar__items-text">Marketplace</a>
+			<a href="#" class="nav-bar__items-text">Incubator</a>
+			<a href="#" class="nav-bar__items-text">Institutional</a>
+			<a href="#" class="nav-bar__items-text">How It Works</a>
+			<a href="#" class="nav-bar__items-text">About Us</a>
+			<a href="#" class="nav-bar__items-text">Academy</a>
+			<a href="#" class="nav-bar__items-text">Blog</a>
 		</div>
 
 		<div class="nav-bar__button-wrapper">
@@ -49,7 +49,7 @@
 		&__title {
 			width: 20%;
 
-			&--text {
+			&-text {
 				font-size: 3.2rem;
 				font-weight: 600;
 			}
@@ -61,7 +61,7 @@
 			justify-content: space-around;
 			max-width: 91rem;
 
-			&--text {
+			&-text {
 				font-size: 1.8rem;
 				font-weight: 400;
 			}
