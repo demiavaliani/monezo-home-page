@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="nav-bar__items">
-			<a href="#" class="nav-bar__items--text font-weight-400">Marketplace</a>
+			<a href="#" class="nav-bar__items--text">Marketplace</a>
 			<a href="#" class="nav-bar__items--text">Incubator</a>
 			<a href="#" class="nav-bar__items--text">Institutional</a>
 			<a href="#" class="nav-bar__items--text">How It Works</a>
@@ -14,7 +14,7 @@
 			<a href="#" class="nav-bar__items--text">Blog</a>
 		</div>
 
-		<div class="nav-bar__button">
+		<div class="nav-bar__button-wrapper">
 			<ButtonNavigation text="All-in-One App" :width="'14.4rem'" />
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 8%;
+		height: 8vh;
 		background-color: #ffffff;
 
 		& a {
@@ -67,7 +67,7 @@
 			}
 		}
 
-		&__button {
+		&__button-wrapper {
 			width: 20%;
 		}
 	}
