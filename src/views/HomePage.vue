@@ -4,6 +4,7 @@
 		<HeaderSection />
 		<PartnersSection />
 		<MonezoNftSection />
+		<FeaturingCollectionSection />
 		<TeamSection />
 	</div>
 </template>
@@ -13,6 +14,7 @@
 	import HeaderSection from "@/views/sections/HeaderSection.vue";
 	import PartnersSection from "@/views/sections/PartnersSection.vue";
 	import MonezoNftSection from "@/views/sections/MonezoNftSection.vue";
+	import FeaturingCollectionSection from "@/views/sections/FeaturingCollectionSection.vue";
 	import TeamSection from "@/views/sections/TeamSection.vue";
 
 	export default {
@@ -22,6 +24,7 @@
 			HeaderSection,
 			PartnersSection,
 			MonezoNftSection,
+			FeaturingCollectionSection,
 			TeamSection,
 		},
 	};

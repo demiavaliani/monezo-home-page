@@ -1,11 +1,7 @@
 <template>
 	<div class="monezo-nft-section">
 		<div class="monezo-nft-section__left-image">
-			<img src="@/assets/images/monezo-nft-section monkers-group.png" />
-			<!-- <img src="@/assets/images/monezo-nft-section-monker-100.png" /> -->
-			<!-- <img src="@/assets/images/monezo-nft-section-monker-1k.png" /> -->
-			<!-- <img src="@/assets/images/monezo-nft-section-monker-5k.png" /> -->
-			<!-- <img src="@/assets/images/monezo-nft-section-monker-10k.png" /> -->
+			<img src="@/assets/images/monezo-nft-section-monkers-group.png" />
 		</div>
 
 		<div class="monezo-nft-section__right-description">
@@ -25,7 +21,7 @@
 				asset type and business.
 			</p>
 
-			<ButtonPrimary text="Get NFT" :width="'21.5rem'" bg-color="blue" />
+			<ButtonPrimary text="Get NFT" :width="'10rem'" bg-color="red" />
 		</div>
 	</div>
 </template>
@@ -65,6 +61,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
+			width: 35vw;
 
 			& .text {
 				margin-bottom: 3.6rem;
