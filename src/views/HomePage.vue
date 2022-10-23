@@ -1,6 +1,7 @@
 <template>
 	<div class="home-page-wrapper">
 		<NavBar></NavBar>
+		<HeaderSection />
 		<PartnersSection />
 		<MonezoNftSection />
 	</div>
@@ -8,6 +9,7 @@
 
 <script>
 	import NavBar from "@/components/NavBar.vue";
+	import HeaderSection from "@/views/sections/HeaderSection.vue";
 	import PartnersSection from "@/views/sections/PartnersSection.vue";
 	import MonezoNftSection from "@/views/sections/MonezoNftSection.vue";
 
@@ -15,6 +17,7 @@
 		name: "HomePage",
 		components: {
 			NavBar,
+			HeaderSection,
 			PartnersSection,
 			MonezoNftSection,
 		},
@@ -23,7 +26,6 @@
 
 <style lang="scss" scoped>
 	.home-page-wrapper {
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
 	}
 </style>
