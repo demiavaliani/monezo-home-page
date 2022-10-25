@@ -46,7 +46,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
-			width: 53rem;
+			width: 36%;
 
 			& .text {
 				margin-bottom: 3.6rem;
@@ -70,11 +70,13 @@
 
 		&__right--image {
 			display: flex;
+			justify-content: center;
 			align-items: flex-end;
+			width: 37%;
 
 			img {
-				width: auto;
-				height: 90%;
+				width: 100%;
+				height: auto;
 			}
 		}
 	}
