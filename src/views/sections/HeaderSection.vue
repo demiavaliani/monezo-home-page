@@ -1,12 +1,12 @@
 <template>
 	<div class="header-section">
-		<div class="header-section__left--description">
-			<p class="text text__large">
+		<div class="header-section__left-description">
+			<p class="text text--large">
 				One Platform,<br />
 				Two Worlds
 			</p>
 
-			<p class="text text__small">
+			<p class="text text--small">
 				Revolutionary platform that connects traditional real world assets &
 				businesses revenue with NFT holders
 			</p>
@@ -18,7 +18,7 @@
 			/>
 		</div>
 
-		<div class="header-section__right--image">
+		<div class="header-section__right-image">
 			<img src="@/assets/images/header-section-monker-1.png" />
 		</div>
 	</div>
@@ -41,7 +41,7 @@
 		height: 75vh;
 		background: linear-gradient(95.78deg, #496df2 0%, #889ff0 100%);
 
-		&__left--description {
+		&__left-description {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -52,14 +52,14 @@
 				margin-bottom: 3.6rem;
 				text-align: left;
 
-				&__large {
+				&--large {
 					font-family: "Syne";
 					font-size: 6.4rem;
 					font-weight: 700;
-					color: $monezo-green;
+					color: $monezo-lima-green;
 				}
 
-				&__small {
+				&--small {
 					font-family: "Poppins";
 					font-size: 1.8rem;
 					font-weight: 400;
@@ -68,7 +68,7 @@
 			}
 		}
 
-		&__right--image {
+		&__right-image {
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
