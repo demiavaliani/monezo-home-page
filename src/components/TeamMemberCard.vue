@@ -27,6 +27,7 @@
 <script>
 	export default {
 		name: "ButtonPrimary",
+
 		props: {
 			memberPicture: {
 				type: String,

@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="nav-bar__button-wrapper">
-			<ButtonNavigation text="All-in-One App" :width="'14.4rem'" />
+			<ButtonNavigation text="All-in-One App" width="14.4rem" />
 		</div>
 	</div>
 </template>
@@ -25,6 +25,7 @@
 
 	export default {
 		name: "NavBar",
+
 		components: {
 			ButtonNavigation,
 		},
@@ -37,7 +38,8 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 8vh;
+		height: 8%;
+		min-height: 8vh;
 		background-color: #ffffff;
 
 		& a {

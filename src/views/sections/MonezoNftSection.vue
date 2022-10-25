@@ -21,7 +21,7 @@
 				asset type and business.
 			</p>
 
-			<ButtonPrimary text="Get NFT" :width="'10rem'" bg-color="red" />
+			<ButtonPrimary text="Get NFT" width="10rem" bg-color="red" />
 		</div>
 	</div>
 </template>
@@ -31,28 +31,33 @@
 
 	export default {
 		name: "MonezoNftSection",
+
 		components: { ButtonPrimary },
 	};
 </script>
 
 <style lang="scss" scoped>
 	.monezo-nft-section {
+		box-sizing: border-box;
 		display: flex;
+		justify-content: space-evenly;
 		width: 100%;
 		height: 100%;
 		min-height: 100vh;
+		padding: 5rem 0;
 		background: linear-gradient(261.77deg, #f24981 0%, #fb92b5 100%);
 
 		&__left-image {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			min-width: 60%;
-			height: 100%;
-			min-height: 100vh;
+			width: 49%;
 
 			img {
-				width: 49vw;
+				width: 100%;
+				height: auto;
+				max-height: 90%;
+				object-fit: contain;
 			}
 		}
 

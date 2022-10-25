@@ -13,7 +13,7 @@
 
 			<ButtonPrimary
 				text="Jump Start Your Earnings"
-				:width="'21.5rem'"
+				width="21.5rem"
 				bg-color="blue"
 			/>
 		</div>
@@ -29,6 +29,7 @@
 
 	export default {
 		name: "HeaderSection",
+
 		components: { ButtonPrimary },
 	};
 </script>
@@ -38,7 +39,8 @@
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
-		height: 75vh;
+		height: 75%;
+		min-height: 75vh;
 		background: linear-gradient(95.78deg, #496df2 0%, #889ff0 100%);
 
 		&__left-description {
@@ -77,6 +79,8 @@
 			img {
 				width: 100%;
 				height: auto;
+				max-height: 90%;
+				object-fit: contain;
 			}
 		}
 	}

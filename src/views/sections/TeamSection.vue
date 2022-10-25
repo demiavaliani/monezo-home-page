@@ -14,7 +14,7 @@
 				:member-name="member.name"
 				:member-position="member.position"
 				:member-picture="member.picture"
-				bg-color="blue"
+				bg-color="brown"
 			></TeamMemberCard>
 		</div>
 	</div>
@@ -73,13 +73,15 @@
 
 <style lang="scss" scoped>
 	.team-section {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		min-height: 100vh;
 		height: 100%;
+		min-height: 100vh;
+		padding: 5rem 0;
 		background: linear-gradient(257.85deg, #f29849 0%, #f6bb86 100%);
 
 		.text {

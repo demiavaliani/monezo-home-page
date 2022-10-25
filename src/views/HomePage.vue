@@ -6,6 +6,7 @@
 		<MonezoNftSection />
 		<FeaturingCollectionSection />
 		<TeamSection />
+		<JoinMonezo />
 	</div>
 </template>
 
@@ -16,6 +17,7 @@
 	import MonezoNftSection from "@/views/sections/MonezoNftSection.vue";
 	import FeaturingCollectionSection from "@/views/sections/FeaturingCollectionSection.vue";
 	import TeamSection from "@/views/sections/TeamSection.vue";
+	import JoinMonezo from "@/views/sections/JoinMonezo.vue";
 
 	export default {
 		name: "HomePage",
@@ -26,6 +28,7 @@
 			MonezoNftSection,
 			FeaturingCollectionSection,
 			TeamSection,
+			JoinMonezo,
 		},
 	};
 </script>

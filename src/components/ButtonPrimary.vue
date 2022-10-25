@@ -11,6 +11,7 @@
 <script>
 	export default {
 		name: "ButtonPrimary",
+
 		props: {
 			text: {
 				type: String,
@@ -59,6 +60,7 @@
 
 <style lang="scss" scoped>
 	.button-primary {
+		min-width: fit-content;
 		border-radius: 10px;
 		background: $monezo-white;
 

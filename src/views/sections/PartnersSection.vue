@@ -9,11 +9,14 @@
 
 <style lang="scss" scoped>
 	.partner-logos {
+		box-sizing: border-box;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		width: 100%;
-		height: 17vh;
+		height: 17%;
+		min-height: 17vh;
+		padding: 3rem 0;
 
 		&__png {
 			height: 60px;
