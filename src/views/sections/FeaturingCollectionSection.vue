@@ -27,7 +27,7 @@
 				</div>
 			</div>
 
-			<ButtonPrimary text="View Collection" width="14.5rem" bg-color="brown" />
+			<ButtonPrimary text="View Collection" width="14.5rem" bg-color="red" />
 		</div>
 
 		<div class="featuring-collection-section__right--image">
@@ -55,7 +55,12 @@
 		height: 100%;
 		min-height: 100vh;
 		padding: 5rem 0;
-		background: linear-gradient(99.04deg, #f29849 0%, #f6bb86 100%);
+		background: linear-gradient(
+			99.04deg,
+			#ffb753 0%,
+			#ffadaf 73.44%,
+			#d98d9c 100%
+		);
 
 		&__left--description {
 			display: flex;

@@ -14,7 +14,7 @@
 				:member-name="member.name"
 				:member-position="member.position"
 				:member-picture="member.picture"
-				bg-color="brown"
+				bg-color="red"
 			></TeamMemberCard>
 		</div>
 	</div>
@@ -82,7 +82,12 @@
 		height: 100%;
 		min-height: 100vh;
 		padding: 5rem 0;
-		background: linear-gradient(257.85deg, #f29849 0%, #f6bb86 100%);
+		background: linear-gradient(
+			104.28deg,
+			#ffb753 0%,
+			#ffadaf 71.35%,
+			#d98d9c 100%
+		);
 
 		.text {
 			font-family: "Poppins";

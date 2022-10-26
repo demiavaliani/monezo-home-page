@@ -41,7 +41,7 @@
 		width: 100%;
 		height: 75%;
 		min-height: 75vh;
-		background: linear-gradient(95.78deg, #496df2 0%, #889ff0 100%);
+		background: linear-gradient(95.78deg, #002199 0%, #0d40f2 100%);
 
 		&__left-description {
 			display: flex;

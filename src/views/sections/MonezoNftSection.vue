@@ -21,7 +21,7 @@
 				asset type and business.
 			</p>
 
-			<ButtonPrimary text="Get NFT" width="10rem" bg-color="red" />
+			<ButtonPrimary text="Get NFT" width="10rem" bg-color="brown" />
 		</div>
 	</div>
 </template>
@@ -45,7 +45,12 @@
 		height: 100%;
 		min-height: 100vh;
 		padding: 5rem 0;
-		background: linear-gradient(261.77deg, #f24981 0%, #fb92b5 100%);
+		background: linear-gradient(
+			102.98deg,
+			#1f6728 0%,
+			#53c326 48.14%,
+			#7eff2a 100%
+		);
 
 		&__left-image {
 			display: flex;

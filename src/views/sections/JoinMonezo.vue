@@ -3,7 +3,7 @@
 		<div class="top">
 			<p class="text--large">Join Monezo Platform</p>
 			<p class="text--small">Stake your NFT and track your earnings</p>
-			<ButtonPrimary text="Access Dashboard" width="16.9rem" bg-color="red" />
+			<ButtonPrimary text="Access Dashboard" width="16.9rem" bg-color="blue" />
 		</div>
 		<div class="middle">
 			<div class="description">
@@ -82,19 +82,19 @@
 			gap: 3.6rem;
 			height: 53%;
 			min-height: 53vh;
-			background: linear-gradient(266.21deg, #f24981 0%, #fb92b5 100%);
+			background: linear-gradient(266.21deg, #002199 0%, #0d40f2 100%);
 			padding: 10rem 0;
 
 			.text {
 				&--large {
-					color: $monezo-persian-blue;
+					color: $monezo-lima-green;
 					font-family: "Syne";
 					font-size: 3.2rem;
 					font-weight: 700;
 				}
 
 				&--small {
-					color: $monezo-black;
+					color: $monezo-white;
 					font-family: "Poppins";
 					font-size: 1.8rem;
 					font-weight: 400;
