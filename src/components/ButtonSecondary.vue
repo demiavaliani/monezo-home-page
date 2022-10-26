@@ -7,6 +7,7 @@
 <script>
 	export default {
 		name: "ButtonSecondary",
+
 		props: {
 			text: {
 				type: String,
@@ -39,6 +40,7 @@
 
 <style lang="scss" scoped>
 	.button-secondary {
+		min-width: fit-content;
 		border-radius: 10px;
 		background: $monezo-white;
 

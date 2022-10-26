@@ -7,6 +7,7 @@
 <script>
 	export default {
 		name: "ButtonNavigation",
+
 		props: {
 			text: {
 				type: String,
@@ -39,6 +40,7 @@
 
 <style lang="scss" scoped>
 	.button-navigation {
+		min-width: fit-content;
 		border-radius: 53px;
 		background: $monezo-gradient-button-navigation-static;
 

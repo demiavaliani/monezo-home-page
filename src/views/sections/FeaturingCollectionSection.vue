@@ -27,11 +27,7 @@
 				</div>
 			</div>
 
-			<ButtonPrimary
-				text="View Collection"
-				:width="'14.5rem'"
-				bg-color="brown"
-			/>
+			<ButtonPrimary text="View Collection" width="14.5rem" bg-color="brown" />
 		</div>
 
 		<div class="featuring-collection-section__right--image">
@@ -45,16 +41,20 @@
 
 	export default {
 		name: "MonezoNftSection",
+
 		components: { ButtonPrimary },
 	};
 </script>
 
 <style lang="scss" scoped>
 	.featuring-collection-section {
+		box-sizing: border-box;
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
+		min-height: 100vh;
+		padding: 5rem 0;
 		background: linear-gradient(99.04deg, #f29849 0%, #f6bb86 100%);
 
 		&__left--description {
@@ -105,9 +105,13 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			width: 28%;
 
 			img {
-				width: 28vw;
+				width: 100%;
+				height: auto;
+				max-height: 90%;
+				object-fit: contain;
 			}
 		}
 	}
