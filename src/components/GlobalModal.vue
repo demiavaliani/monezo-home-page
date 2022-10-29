@@ -38,7 +38,6 @@
 <style lang="scss" scoped>
 	.global-modal {
 		position: absolute;
-		margin: 5rem;
 		box-sizing: border-box;
 		padding: 1.8rem;
 		max-width: 50rem;
