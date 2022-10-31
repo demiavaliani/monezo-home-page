@@ -44,11 +44,13 @@
 		background: linear-gradient(95.78deg, #002199 0%, #0d40f2 100%);
 
 		&__left-description {
+			box-sizing: border-box;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
 			width: 36%;
+			padding: 5rem 0;
 
 			& .text {
 				margin-bottom: 3.6rem;
