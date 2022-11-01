@@ -1,9 +1,11 @@
 <template>
 	<div class="yieldful-nft">
 		<div class="text">
-			<p class="text--top">Few clicks and you’re done</p>
+			<p class="text--top">The new creative economy</p>
 			<p class="text--large">How Yieldful NFT works</p>
-			<p class="text--small">Start earn in 3 simple steps</p>
+			<p class="text--small">
+				Project by project, Monezo changing the way new ideas come to life
+			</p>
 		</div>
 
 		<div ref="boxes-wrapper" class="boxes-wrapper">
@@ -33,12 +35,14 @@
 </template>
 
 <script>
-	import * as jsPlumbBrowserUI from "@jsplumb/browser-ui";
+	import lineConnector from "@/mixins/lineConnector";
 	import ButtonPrimary from "@/components/ButtonPrimary.vue";
 	import YieldfulBox from "@/components/YieldfulBox.vue";
 
 	export default {
 		name: "YieldfulNft",
+
+		mixins: [lineConnector],
 
 		components: {
 			ButtonPrimary,
@@ -47,8 +51,6 @@
 
 		data() {
 			return {
-				isModalOpen: false,
-
 				boxDataScheme: [
 					{
 						id: 0,
@@ -149,243 +151,199 @@
 
 				tooltipBgColor: "",
 
-				rightToLeftCentered: {
-					endpoint: "Blank",
-					anchors: ["Right", "Left"],
-				},
-
-				leftToRightCentered: {
-					endpoint: "Blank",
-					anchors: ["Left", "Right"],
-				},
-
-				bottomToTopCentered: {
-					endpoint: "Blank",
-					anchors: ["Bottom", "Top"],
-				},
-
-				rightToLeftTop: {
-					endpoint: "Blank",
-					anchors: [
-						[0, 0.35, 0, 0, 0, 0],
-						[1, 0.35, 0, 0, 0, 0],
-					],
-				},
-
-				leftToRightBottom: {
-					endpoint: "Blank",
-					anchors: [
-						[1, 0.65, 0, 0, 0, 0],
-						[0, 0.65, 0, 0, 0, 0],
-					],
-				},
-
-				topToBottomLeft: {
-					endpoint: "Blank",
-					anchors: [
-						[0.33, 0, 0, 0, 0, 0],
-						[0.33, 1, 0, 0, 0, 0],
-					],
-				},
-
-				bottomToTopRight: {
-					endpoint: "Blank",
-					anchors: [
-						[0.68, 1, 0, 0, 0, 0],
-						[0.68, 0, 0, 0, 0, 0],
-					],
-				},
+				connectorData: [
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Left"],
+						},
+						source: "business",
+						target: "incubator",
+						label: "Business Research",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 8,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Left"],
+						},
+						source: "incubator",
+						target: "score",
+						label: "Audit",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 6,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Left"],
+						},
+						source: "score",
+						target: "nft",
+						label: "NFT Collection & Sale Model Development",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 13,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Bottom", "Top"],
+						},
+						source: "nft",
+						target: "marketplace",
+						label: "Launchpad",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 0,
+						paddingLeft: 13,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Right"],
+						},
+						source: "marketplace",
+						target: "investors",
+						label: "Sale",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 6,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0, 0.35, 0, 0, 0, 0],
+								[1, 0.35, 0, 0, 0, 0],
+							],
+						},
+						source: "investors",
+						target: "wallet",
+						label: "Staking",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 6,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.65, 0, 0, 0, 0],
+								[0, 0.65, 0, 0, 0, 0],
+							],
+						},
+						source: "wallet",
+						target: "investors",
+						label: "Profit Distribution",
+						strokeColor: "#5CE517",
+						paddingTop: 9,
+						paddingRight: 0,
+						paddingBottom: 0,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0, 0.35, 0, 0, 0, 0],
+								[1, 0.35, 0, 0, 0, 0],
+							],
+						},
+						source: "wallet",
+						target: "escrow",
+						label: "Money Transfer",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 8,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.65, 0, 0, 0, 0],
+								[0, 0.65, 0, 0, 0, 0],
+							],
+						},
+						source: "escrow",
+						target: "wallet",
+						label: "Profit Distribution",
+						strokeColor: "#5CE517",
+						paddingTop: 9,
+						paddingRight: 0,
+						paddingBottom: 0,
+						paddingLeft: 0,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.68, 0, 0, 0, 0, 0],
+								[0.68, 1, 0, 0, 0, 0],
+							],
+						},
+						source: "escrow",
+						target: "business",
+						label: "Liquidity Supply",
+						strokeColor: "black",
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 0,
+						paddingLeft: 11,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.33, 1, 0, 0, 0, 0],
+								[0.33, 0, 0, 0, 0, 0],
+							],
+						},
+						source: "business",
+						target: "escrow",
+						label: "Profit",
+						strokeColor: "#5CE517",
+						paddingTop: 0,
+						paddingRight: 8,
+						paddingBottom: 0,
+						paddingLeft: 0,
+					},
+				],
 			};
 		},
 
-		methods: {
-			connector(
-				source,
-				target,
-				label,
-				strokeColor,
-				paddingTop,
-				paddingRight,
-				paddingBottom,
-				paddingLeft
-			) {
-				return {
-					source: source,
-					target: target,
-					connector: "Straight",
-					paintStyle: { stroke: strokeColor, strokeWidth: 2 },
-					detachable: false,
-					overlays: [
-						{
-							type: "PlainArrow",
-							options: {
-								location: 0.5,
-								width: 22,
-								length: 22,
-								foldback: 1,
-							},
-						},
-						{
-							type: "Label",
-							options: {
-								label: label,
-								location: [0.5],
-								cssClass: `jtk-overlay__label padding-top-${paddingTop} padding-right-${paddingRight} padding-bottom-${paddingBottom} padding-left-${paddingLeft}`,
-							},
-						},
-					],
-				};
-			},
-		},
-
 		mounted() {
-			const instance = jsPlumbBrowserUI.newInstance({
-				container: this.$refs["boxes-wrapper"],
-				elementsDraggable: false,
-			});
-			instance.connect(
-				this.rightToLeftCentered,
-				this.connector(
-					this.$refs["business"][0],
-					this.$refs["incubator"][0],
-					"Business Research",
-					"black",
-					0,
-					0,
-					8,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftCentered,
-				this.connector(
-					this.$refs["incubator"][0],
-					this.$refs["score"][0],
-					"Audit",
-					"black",
-					0,
-					0,
-					6,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftCentered,
-				this.connector(
-					this.$refs["score"][0],
-					this.$refs["nft"][0],
-					"NFT Collection & Sale Model Development",
-					"black",
-					0,
-					0,
-					13,
-					0
-				)
-			);
-			instance.connect(
-				this.bottomToTopCentered,
-				this.connector(
-					this.$refs["nft"][0],
-					this.$refs["marketplace"][0],
-					"Launchpad",
-					"black",
-					0,
-					0,
-					0,
-					13
-				)
-			);
-			instance.connect(
-				this.leftToRightCentered,
-				this.connector(
-					this.$refs["marketplace"][0],
-					this.$refs["investors"][0],
-					"Sale",
-					"black",
-					0,
-					0,
-					6,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftTop,
-				this.connector(
-					this.$refs["investors"][0],
-					this.$refs["wallet"][0],
-					"Staking",
-					"black",
-					0,
-					0,
-					6,
-					0
-				)
-			);
-			instance.connect(
-				this.leftToRightBottom,
-				this.connector(
-					this.$refs["wallet"][0],
-					this.$refs["investors"][0],
-					"Profit Distribution",
-					"#5CE517",
-					9,
-					0,
-					0,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftTop,
-				this.connector(
-					this.$refs["wallet"][0],
-					this.$refs["escrow"][0],
-					"Money Transfer",
-					"black",
-					0,
-					0,
-					8,
-					0
-				)
-			);
-			instance.connect(
-				this.leftToRightBottom,
-				this.connector(
-					this.$refs["escrow"][0],
-					this.$refs["wallet"][0],
-					"Profit Distribution",
-					"#5CE517",
-					9,
-					0,
-					0,
-					0
-				)
-			);
-			instance.connect(
-				this.topToBottomLeft,
-				this.connector(
-					this.$refs["escrow"][0],
-					this.$refs["business"][0],
-					"Profit",
-					"black",
-					0,
-					8,
-					0,
-					0
-				)
-			);
-			instance.connect(
-				this.bottomToTopRight,
-				this.connector(
-					this.$refs["business"][0],
-					this.$refs["escrow"][0],
-					"Liquidity Supply",
-					"black",
-					0,
-					0,
-					0,
-					11
-				)
-			);
+			this.init(this.$refs["boxes-wrapper"]);
+
+			for (const item of this.connectorData) {
+				this.instanceConnect(
+					item.endpoint,
+					this.$refs[item.source][0],
+					this.$refs[item.target][0],
+					item.label,
+					item.strokeColor,
+					item.paddingTop,
+					item.paddingRight,
+					item.paddingBottom,
+					item.paddingLeft
+				);
+			}
 		},
 	};
 </script>

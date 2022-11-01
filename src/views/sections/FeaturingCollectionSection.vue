@@ -40,7 +40,7 @@
 	import ButtonPrimary from "@/components/ButtonPrimary.vue";
 
 	export default {
-		name: "MonezoNftSection",
+		name: "FeaturingCollectionSection",
 
 		components: { ButtonPrimary },
 	};
