@@ -56,9 +56,12 @@ export default {
 			paddingBottom,
 			paddingLeft,
 			connector,
-			overlay = "arrow"
+			overlay = {
+				type: "plain-arrow",
+				location: 0.5,
+			}
 		) {
-			if (overlay === "arrow") {
+			if (overlay.type === "plain-arrow") {
 				return {
 					source: source,
 					target: target,
@@ -69,7 +72,7 @@ export default {
 						{
 							type: "PlainArrow",
 							options: {
-								location: 0.5,
+								location: overlay.location,
 								width: 22,
 								length: 22,
 								foldback: 1,
