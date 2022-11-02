@@ -1,6 +1,6 @@
 <template>
 	<div class="team-section">
-		<p class="text text--top">Our team</p>
+		<p class="text text--top">OUR TEAM</p>
 		<p class="text text--large">Meet Our Executive Leadership Team</p>
 		<p class="text text--small">
 			Never doubt that a small group of thoughtful people can change the world.
@@ -95,7 +95,7 @@
 				margin-bottom: 1.8rem;
 				font-family: "Poppins";
 				font-size: 1.8rem;
-				font-weight: 500;
+				font-weight: 400;
 				color: $monezo-white;
 			}
 

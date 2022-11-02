@@ -1,11 +1,11 @@
 <template>
 	<div class="featuring-collection-section">
 		<div class="featuring-collection-section__left--description">
-			<p class="text text__top">Featuring collection</p>
+			<p class="text text--top">FEATURING COLLECTION</p>
 
-			<p class="text text__large">Real Estate Monker</p>
+			<p class="text text--large">Real Estate Monker</p>
 
-			<p class="text text__small">
+			<p class="text text--small">
 				This collection suits best conservative investors, which prefer stable
 				and predictable Yield. Stake NFT and get as much as 12% APY Yield return
 				paid daily.
@@ -74,22 +74,22 @@
 				margin-bottom: 3.6rem;
 				text-align: left;
 
-				&__top {
+				&--top {
 					margin-bottom: 1.8rem;
 					font-family: "Poppins";
 					font-size: 1.8rem;
-					font-weight: 500;
+					font-weight: 400;
 					color: $monezo-white;
 				}
 
-				&__large {
+				&--large {
 					font-family: "Syne";
 					font-size: 3.2rem;
 					font-weight: 700;
 					color: $monezo-purple-heart;
 				}
 
-				&__small {
+				&--small {
 					font-family: "Poppins";
 					font-size: 1.8rem;
 					font-weight: 400;

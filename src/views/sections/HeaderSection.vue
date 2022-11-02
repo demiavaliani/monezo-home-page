@@ -67,7 +67,7 @@
 					font-family: "Poppins";
 					font-size: 1.8rem;
 					font-weight: 400;
-					color: $monezo-black;
+					color: $monezo-white;
 				}
 			}
 		}
