@@ -6,6 +6,7 @@
 		<MonezoNftSection />
 		<FeaturingCollectionSection />
 		<YieldfulNft />
+		<EcosystemSection />
 		<TeamSection />
 		<JoinMonezo />
 	</div>
@@ -18,6 +19,7 @@
 	import MonezoNftSection from "@/views/sections/MonezoNftSection.vue";
 	import FeaturingCollectionSection from "@/views/sections/FeaturingCollectionSection.vue";
 	import YieldfulNft from "@/views/sections/YieldfulNft.vue";
+	import EcosystemSection from "@/views/sections/EcosystemSection.vue";
 	import TeamSection from "@/views/sections/TeamSection.vue";
 	import JoinMonezo from "@/views/sections/JoinMonezo.vue";
 
@@ -30,6 +32,7 @@
 			MonezoNftSection,
 			FeaturingCollectionSection,
 			YieldfulNft,
+			EcosystemSection,
 			TeamSection,
 			JoinMonezo,
 		},

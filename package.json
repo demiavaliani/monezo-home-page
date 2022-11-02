@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@jsplumb/browser-ui": "^5.12.3",
+    "@jsplumb/connector-bezier": "^5.12.3",
+    "@jsplumb/connector-flowchart": "^5.12.3",
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
     "vue-js-popover": "^1.2.1",

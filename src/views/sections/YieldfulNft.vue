@@ -1,9 +1,11 @@
 <template>
 	<div class="yieldful-nft">
 		<div class="text">
-			<p class="text--top">Few clicks and you’re done</p>
+			<p class="text--top">The new creative economy</p>
 			<p class="text--large">How Yieldful NFT works</p>
-			<p class="text--small">Start earn in 3 simple steps</p>
+			<p class="text--small">
+				Project by project, Monezo changing the way new ideas come to life
+			</p>
 		</div>
 
 		<div ref="boxes-wrapper" class="boxes-wrapper">
@@ -11,13 +13,16 @@
 				v-for="(boxData, index) in boxDataScheme"
 				:key="boxData.id"
 				:ref="boxData.name"
-				v-popover:tooltip.top="boxData.modalText"
+				v-popover:yieldful-tooltip.top
 			>
 				<YieldfulBox
 					:style="boxDataScheme[index]"
 					:src="boxData.name"
 					:text="boxData.text"
-					@mouseenter.native="tooltipBgColor = boxData.tooltipBgColor"
+					@mouseenter.native="
+						tooltipBgColor = boxData.tooltipBgColor;
+						tooltipText = boxData.tooltipText;
+					"
 				>
 				</YieldfulBox>
 			</div>
@@ -25,20 +30,25 @@
 
 		<ButtonPrimary text="Start Now" width="10.4rem" bg-color="blue" />
 
-		<tooltip
+		<popover
+			name="yieldful-tooltip"
 			:event="'hover'"
+			:pointer="false"
 			:style="{ backgroundColor: tooltipBgColor }"
-		></tooltip>
+			>{{ tooltipText }}</popover
+		>
 	</div>
 </template>
 
 <script>
-	import * as jsPlumbBrowserUI from "@jsplumb/browser-ui";
+	import lineConnector from "@/mixins/lineConnector";
 	import ButtonPrimary from "@/components/ButtonPrimary.vue";
 	import YieldfulBox from "@/components/YieldfulBox.vue";
 
 	export default {
 		name: "YieldfulNft",
+
+		mixins: [lineConnector],
 
 		components: {
 			ButtonPrimary,
@@ -47,14 +57,12 @@
 
 		data() {
 			return {
-				isModalOpen: false,
-
 				boxDataScheme: [
 					{
 						id: 0,
 						name: "business",
 						text: "Business",
-						modalText: `
+						tooltipText: `
 										Any capital-intensive business can apply to Monezo Incubator.
 										Small start-ups get the required funds and support to build MVP and test business hypotheses.
 										Large enterprises get benefit from leveraging your finance and multiplying earnings
@@ -66,7 +74,7 @@
 						id: 1,
 						name: "incubator",
 						text: "Monezo Incubator",
-						modalText: `
+						tooltipText: `
 										Monezo Incubator is an infrastructure system focused on corporate clients,
 										designed to accelerate the growth and success of your perspective businesses,
 										start-ups and large enterprises
@@ -78,7 +86,7 @@
 						id: 2,
 						name: "score",
 						text: "Monezo Score",
-						modalText: `
+						tooltipText: `
 										Each business applied to Monezo incubator will go through case to-case evaluation by Monezo
 										to ensure full reliability and protection for potential NFT investors and partners
 									`,
@@ -89,7 +97,7 @@
 						id: 3,
 						name: "nft",
 						text: "Yieldful NFT",
-						modalText: `
+						tooltipText: `
 										Yieldful NFT shares yield gained from businesses & management of real-world assets
 										to Monezo NFT investors.
 										Each NFT collection will differ and has unique specialties depending on business types
@@ -101,7 +109,7 @@
 						id: 4,
 						name: "escrow",
 						text: "Monezo Escrow",
-						modalText: `
+						tooltipText: `
 										Monezo Escrow is a security system dedicated to ensuring liquidity funds safety.
 										It acts as a bridge between businesses & NFT holders.
 										Its primary purpose is to transfer liquidity to businesses and store revenue
@@ -114,7 +122,7 @@
 						id: 5,
 						name: "wallet",
 						text: "Monezo Wallet",
-						modalText: `
+						tooltipText: `
 										The Monezo Wallet is a revolutionary keyless non-custodial crypto wallet for storing,
 										growing and earning rewards on your real-world assets and NFTs.
 										The Monezo wallet will be integrated into an All-In-One App
@@ -126,7 +134,7 @@
 						id: 6,
 						name: "investors",
 						text: "NFT Investors",
-						modalText: `
+						tooltipText: `
 										Any investor can get access to Yieldful NFT collections directly on branded Monezo Marketplace
 										or through verified 3-rd party NFT marketplaces
 									`,
@@ -137,7 +145,7 @@
 						id: 7,
 						name: "marketplace",
 						text: "Monezo Marketplace",
-						modalText: `
+						tooltipText: `
 										Monezo NFT collections will be presented on the branded marketplace.
 										All the Yieldful Monezo NFT collections will be also listed on the leading NFT marketplaces,
 										such as MagicEden, OpenSea, Rarible, Binance & CoinBase
@@ -149,243 +157,168 @@
 
 				tooltipBgColor: "",
 
-				rightToLeftCentered: {
-					endpoint: "Blank",
-					anchors: ["Right", "Left"],
-				},
+				tooltipText: "",
 
-				leftToRightCentered: {
-					endpoint: "Blank",
-					anchors: ["Left", "Right"],
-				},
-
-				bottomToTopCentered: {
-					endpoint: "Blank",
-					anchors: ["Bottom", "Top"],
-				},
-
-				rightToLeftTop: {
-					endpoint: "Blank",
-					anchors: [
-						[0, 0.35, 0, 0, 0, 0],
-						[1, 0.35, 0, 0, 0, 0],
-					],
-				},
-
-				leftToRightBottom: {
-					endpoint: "Blank",
-					anchors: [
-						[1, 0.65, 0, 0, 0, 0],
-						[0, 0.65, 0, 0, 0, 0],
-					],
-				},
-
-				topToBottomLeft: {
-					endpoint: "Blank",
-					anchors: [
-						[0.33, 0, 0, 0, 0, 0],
-						[0.33, 1, 0, 0, 0, 0],
-					],
-				},
-
-				bottomToTopRight: {
-					endpoint: "Blank",
-					anchors: [
-						[0.68, 1, 0, 0, 0, 0],
-						[0.68, 0, 0, 0, 0, 0],
-					],
-				},
+				connectorData: [
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Left"],
+						},
+						source: "business",
+						target: "incubator",
+						label: "Business Research",
+						strokeColor: "black",
+						paddingBottom: 8,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Left"],
+						},
+						source: "incubator",
+						target: "score",
+						label: "Audit",
+						strokeColor: "black",
+						paddingBottom: 6,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Left"],
+						},
+						source: "score",
+						target: "nft",
+						label: "NFT Collection & Sale Model Development",
+						strokeColor: "black",
+						paddingBottom: 13,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Bottom", "Top"],
+						},
+						source: "nft",
+						target: "marketplace",
+						label: "Launchpad",
+						strokeColor: "black",
+						paddingLeft: 13,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Right"],
+						},
+						source: "marketplace",
+						target: "investors",
+						label: "Sale",
+						strokeColor: "black",
+						paddingBottom: 6,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0, 0.35, 0, 0, 0, 0],
+								[1, 0.35, 0, 0, 0, 0],
+							],
+						},
+						source: "investors",
+						target: "wallet",
+						label: "Staking",
+						strokeColor: "black",
+						paddingBottom: 6,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.65, 0, 0, 0, 0],
+								[0, 0.65, 0, 0, 0, 0],
+							],
+						},
+						source: "wallet",
+						target: "investors",
+						label: "Profit Distribution",
+						strokeColor: "#5CE517",
+						paddingTop: 9,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0, 0.35, 0, 0, 0, 0],
+								[1, 0.35, 0, 0, 0, 0],
+							],
+						},
+						source: "wallet",
+						target: "escrow",
+						label: "Money Transfer",
+						strokeColor: "black",
+						paddingBottom: 8,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.65, 0, 0, 0, 0],
+								[0, 0.65, 0, 0, 0, 0],
+							],
+						},
+						source: "escrow",
+						target: "wallet",
+						label: "Profit Distribution",
+						strokeColor: "#5CE517",
+						paddingTop: 9,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.68, 0, 0, 0, 0, 0],
+								[0.68, 1, 0, 0, 0, 0],
+							],
+						},
+						source: "escrow",
+						target: "business",
+						label: "Liquidity Supply",
+						strokeColor: "black",
+						paddingLeft: 11,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.33, 1, 0, 0, 0, 0],
+								[0.33, 0, 0, 0, 0, 0],
+							],
+						},
+						source: "business",
+						target: "escrow",
+						label: "Profit",
+						strokeColor: "#5CE517",
+						paddingRight: 8,
+					},
+				],
 			};
 		},
 
-		methods: {
-			connector(
-				source,
-				target,
-				label,
-				strokeColor,
-				paddingTop,
-				paddingRight,
-				paddingBottom,
-				paddingLeft
-			) {
-				return {
-					source: source,
-					target: target,
-					connector: "Straight",
-					paintStyle: { stroke: strokeColor, strokeWidth: 2 },
-					detachable: false,
-					overlays: [
-						{
-							type: "PlainArrow",
-							options: {
-								location: 0.5,
-								width: 22,
-								length: 22,
-								foldback: 1,
-							},
-						},
-						{
-							type: "Label",
-							options: {
-								label: label,
-								location: [0.5],
-								cssClass: `jtk-overlay__label padding-top-${paddingTop} padding-right-${paddingRight} padding-bottom-${paddingBottom} padding-left-${paddingLeft}`,
-							},
-						},
-					],
-				};
-			},
-		},
-
 		mounted() {
-			const instance = jsPlumbBrowserUI.newInstance({
-				container: this.$refs["boxes-wrapper"],
-				elementsDraggable: false,
-			});
-			instance.connect(
-				this.rightToLeftCentered,
-				this.connector(
-					this.$refs["business"][0],
-					this.$refs["incubator"][0],
-					"Business Research",
-					"black",
-					0,
-					0,
-					8,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftCentered,
-				this.connector(
-					this.$refs["incubator"][0],
-					this.$refs["score"][0],
-					"Audit",
-					"black",
-					0,
-					0,
-					6,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftCentered,
-				this.connector(
-					this.$refs["score"][0],
-					this.$refs["nft"][0],
-					"NFT Collection & Sale Model Development",
-					"black",
-					0,
-					0,
-					13,
-					0
-				)
-			);
-			instance.connect(
-				this.bottomToTopCentered,
-				this.connector(
-					this.$refs["nft"][0],
-					this.$refs["marketplace"][0],
-					"Launchpad",
-					"black",
-					0,
-					0,
-					0,
-					13
-				)
-			);
-			instance.connect(
-				this.leftToRightCentered,
-				this.connector(
-					this.$refs["marketplace"][0],
-					this.$refs["investors"][0],
-					"Sale",
-					"black",
-					0,
-					0,
-					6,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftTop,
-				this.connector(
-					this.$refs["investors"][0],
-					this.$refs["wallet"][0],
-					"Staking",
-					"black",
-					0,
-					0,
-					6,
-					0
-				)
-			);
-			instance.connect(
-				this.leftToRightBottom,
-				this.connector(
-					this.$refs["wallet"][0],
-					this.$refs["investors"][0],
-					"Profit Distribution",
-					"#5CE517",
-					9,
-					0,
-					0,
-					0
-				)
-			);
-			instance.connect(
-				this.rightToLeftTop,
-				this.connector(
-					this.$refs["wallet"][0],
-					this.$refs["escrow"][0],
-					"Money Transfer",
-					"black",
-					0,
-					0,
-					8,
-					0
-				)
-			);
-			instance.connect(
-				this.leftToRightBottom,
-				this.connector(
-					this.$refs["escrow"][0],
-					this.$refs["wallet"][0],
-					"Profit Distribution",
-					"#5CE517",
-					9,
-					0,
-					0,
-					0
-				)
-			);
-			instance.connect(
-				this.topToBottomLeft,
-				this.connector(
-					this.$refs["escrow"][0],
-					this.$refs["business"][0],
-					"Profit",
-					"black",
-					0,
-					8,
-					0,
-					0
-				)
-			);
-			instance.connect(
-				this.bottomToTopRight,
-				this.connector(
-					this.$refs["business"][0],
-					this.$refs["escrow"][0],
-					"Liquidity Supply",
-					"black",
-					0,
-					0,
-					0,
-					11
-				)
-			);
+			this.init(this.$refs["boxes-wrapper"]);
+
+			for (const item of this.connectorData) {
+				this.instanceConnect(
+					item.endpoint,
+					this.$refs[item.source][0],
+					this.$refs[item.target][0],
+					item.label,
+					item.strokeColor,
+					item.paddingTop,
+					item.paddingRight,
+					item.paddingBottom,
+					item.paddingLeft
+				);
+			}
 		},
 	};
 </script>
@@ -471,17 +404,18 @@
 				}
 			}
 		}
-	}
-	[data-popover="tooltip"] {
-		width: fit-content !important;
-		max-width: 50rem !important;
-		margin-top: -2rem !important;
-		border: 1px solid $monezo-black;
-		border-radius: 18px;
-		color: black;
-		font-family: "Poppins";
-		font-size: 1.6rem;
-		font-weight: 400;
+		[data-popover="yieldful-tooltip"] {
+			width: fit-content !important;
+			max-width: 50rem !important;
+			margin-top: -2rem !important;
+			padding: 1.2rem;
+			border: 1px solid $monezo-black;
+			border-radius: 18px;
+			color: black;
+			font-family: "Poppins";
+			font-size: 1.6rem;
+			font-weight: 400;
+		}
 	}
 </style>
 
