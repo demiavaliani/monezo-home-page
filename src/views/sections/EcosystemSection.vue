@@ -1,7 +1,7 @@
 <template>
 	<div class="ecosystem">
 		<div class="text">
-			<p class="text--top">Connecting worlds</p>
+			<p class="text--top">CONNECTING WORLDS</p>
 			<p class="text--large">Monezo Ecosystem</p>
 			<p class="text--small">
 				Monezo is not only about high yields it is about complete ecosystem
@@ -42,7 +42,6 @@
 
 <script>
 	import lineConnector from "@/mixins/lineConnector";
-	import { FlowchartConnector } from "@jsplumb/connector-flowchart";
 
 	export default {
 		name: "EcosystemSection",
@@ -485,10 +484,10 @@
 			&--top {
 				margin-top: 3rem;
 				margin-bottom: 1.8rem;
-				color: $monezo-white;
+				color: $monezo-black;
 				font-family: "Poppins";
 				font-size: 1.8rem;
-				font-weight: 500;
+				font-weight: 400;
 			}
 
 			&--large {
@@ -528,7 +527,6 @@
 				justify-content: center;
 				align-items: center;
 				height: 5.4rem;
-				vertical-align: middle;
 				border: 1px solid black;
 				border-radius: 18px;
 				background-color: $monezo-snowy-mint;

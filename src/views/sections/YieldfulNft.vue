@@ -1,7 +1,7 @@
 <template>
 	<div class="yieldful-nft">
 		<div class="text">
-			<p class="text--top">The new creative economy</p>
+			<p class="text--top">THE NEW CREATIVE ECONOMY</p>
 			<p class="text--large">How Yieldful NFT works</p>
 			<p class="text--small">
 				Project by project, Monezo changing the way new ideas come to life
@@ -343,10 +343,10 @@
 			&--top {
 				margin-top: 3rem;
 				margin-bottom: 1.8rem;
-				color: $monezo-white;
+				color: $monezo-black;
 				font-family: "Poppins";
 				font-size: 1.8rem;
-				font-weight: 500;
+				font-weight: 400;
 			}
 
 			&--large {

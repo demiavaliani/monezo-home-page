@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="monezo-nft-section__right-description">
-			<p class="text text--top">More than an investment platform</p>
+			<p class="text text--top">MORE THAN AN INVESTMENT PLATFORM</p>
 
 			<p class="text text--large">
 				Start your passive income Journey with Monezo NFT
@@ -79,10 +79,10 @@
 
 				&--top {
 					margin-bottom: 1.8rem;
+					color: $monezo-black;
 					font-family: "Poppins";
 					font-size: 1.8rem;
-					font-weight: 500;
-					color: $monezo-white;
+					font-weight: 400;
 				}
 
 				&--large {

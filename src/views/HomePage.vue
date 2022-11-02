@@ -1,6 +1,6 @@
 <template>
 	<div class="home-page-wrapper">
-		<NavBar></NavBar>
+		<NavBar />
 		<HeaderSection />
 		<PartnersSection />
 		<MonezoNftSection />
@@ -8,6 +8,7 @@
 		<YieldfulNft />
 		<EcosystemSection />
 		<TeamSection />
+		<RoadmapSection />
 		<JoinMonezo />
 	</div>
 </template>
@@ -21,6 +22,7 @@
 	import YieldfulNft from "@/views/sections/YieldfulNft.vue";
 	import EcosystemSection from "@/views/sections/EcosystemSection.vue";
 	import TeamSection from "@/views/sections/TeamSection.vue";
+	import RoadmapSection from "@/views/sections/RoadmapSection.vue";
 	import JoinMonezo from "@/views/sections/JoinMonezo.vue";
 
 	export default {
@@ -34,6 +36,7 @@
 			YieldfulNft,
 			EcosystemSection,
 			TeamSection,
+			RoadmapSection,
 			JoinMonezo,
 		},
 	};
@@ -42,5 +45,6 @@
 <style lang="scss" scoped>
 	.home-page-wrapper {
 		width: 100%;
+		overflow: auto;
 	}
 </style>
