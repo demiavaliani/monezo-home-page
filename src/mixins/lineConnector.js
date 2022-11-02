@@ -1,4 +1,5 @@
 import * as jsPlumbBrowserUI from "@jsplumb/browser-ui";
+import { FlowchartConnector } from "@jsplumb/connector-flowchart";
 
 export default {
 	data() {
@@ -24,7 +25,9 @@ export default {
 			paddingTop,
 			paddingRight,
 			paddingBottom,
-			paddingLeft
+			paddingLeft,
+			connector,
+			overlay
 		) {
 			this.instanceData.connect(
 				endpoint,
@@ -36,7 +39,9 @@ export default {
 					paddingTop,
 					paddingRight,
 					paddingBottom,
-					paddingLeft
+					paddingLeft,
+					connector,
+					overlay
 				)
 			);
 		},
@@ -45,38 +50,49 @@ export default {
 			source,
 			target,
 			label,
-			strokeColor,
+			strokeColor = "black",
 			paddingTop,
 			paddingRight,
 			paddingBottom,
-			paddingLeft
+			paddingLeft,
+			connector,
+			overlay = "arrow"
 		) {
-			return {
-				source: source,
-				target: target,
-				connector: "Straight",
-				paintStyle: { stroke: strokeColor, strokeWidth: 2 },
-				detachable: false,
-				overlays: [
-					{
-						type: "PlainArrow",
-						options: {
-							location: 0.5,
-							width: 22,
-							length: 22,
-							foldback: 1,
+			if (overlay === "arrow") {
+				return {
+					source: source,
+					target: target,
+					connector: connector,
+					paintStyle: { stroke: strokeColor, strokeWidth: 2 },
+					detachable: false,
+					overlays: [
+						{
+							type: "PlainArrow",
+							options: {
+								location: 0.5,
+								width: 22,
+								length: 22,
+								foldback: 1,
+							},
 						},
-					},
-					{
-						type: "Label",
-						options: {
-							label: label,
-							location: [0.5],
-							cssClass: `jtk-overlay__label padding-top-${paddingTop} padding-right-${paddingRight} padding-bottom-${paddingBottom} padding-left-${paddingLeft}`,
+						{
+							type: "Label",
+							options: {
+								label: label,
+								location: [0.5],
+								cssClass: `jtk-overlay__label padding-top-${paddingTop} padding-right-${paddingRight} padding-bottom-${paddingBottom} padding-left-${paddingLeft}`,
+							},
 						},
-					},
-				],
-			};
+					],
+				};
+			} else
+				return {
+					source: source,
+					target: target,
+					connector: connector,
+					paintStyle: { stroke: strokeColor, strokeWidth: 2 },
+					detachable: false,
+				};
 		},
 	},
 
