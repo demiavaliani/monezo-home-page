@@ -343,7 +343,7 @@
 			&--top {
 				margin-top: 3rem;
 				margin-bottom: 1.8rem;
-				color: $monezo-white;
+				color: $monezo-black;
 				font-family: "Poppins";
 				font-size: 1.8rem;
 				font-weight: 400;

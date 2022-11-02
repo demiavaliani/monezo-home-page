@@ -76,10 +76,10 @@
 
 				&--top {
 					margin-bottom: 1.8rem;
+					color: $monezo-black;
 					font-family: "Poppins";
 					font-size: 1.8rem;
 					font-weight: 400;
-					color: $monezo-white;
 				}
 
 				&--large {
