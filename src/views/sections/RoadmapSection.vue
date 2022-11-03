@@ -328,6 +328,176 @@
 						},
 					},
 				],
+
+				connectorDataMaxDeviceWidth584: [
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Top"],
+						},
+						source: "q1-2022",
+						target: "q2-2022",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: "plain-arrow",
+							location: 0.3,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Top"],
+						},
+						source: "q2-2022",
+						target: "q3-2022",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: false,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Top"],
+						},
+						source: "q3-2022",
+						target: "q4-2022",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: "plain-arrow",
+							location: 0.3,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Top"],
+						},
+						source: "q4-2022",
+						target: "q1-2023",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: false,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Top"],
+						},
+						source: "q1-2023",
+						target: "q2-2023",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: "plain-arrow",
+							location: 0.3,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Top"],
+						},
+						source: "q2-2023",
+						target: "q3-2023",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: false,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Top"],
+						},
+						source: "q3-2023",
+						target: "q4-2023",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: "plain-arrow",
+							location: 0.3,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Top"],
+						},
+						source: "q4-2023",
+						target: "q1-q2-2024",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: false,
+						},
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Right", "Top"],
+						},
+						source: "q1-q2-2024",
+						target: "q3-q4-2024",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: {
+							type: "plain-arrow",
+							location: 0.3,
+						},
+					},
+				],
 			};
 		},
 
@@ -352,20 +522,54 @@
 		mounted() {
 			this.init(this.$refs["chart"]);
 
-			for (const item of this.connectorData) {
-				this.instanceConnect(
-					item.endpoint,
-					this.$refs[item.source][0],
-					this.$refs[item.target][0],
-					item.label,
-					item.strokeColor,
-					item.paddingTop,
-					item.paddingRight,
-					item.paddingBottom,
-					item.paddingLeft,
-					item.connector,
-					item.overlay
-				);
+			if (window.matchMedia("(max-width: 321px)").matches) {
+				for (const item of this.connectorDataMaxDeviceWidth584) {
+					this.instanceConnect(
+						item.endpoint,
+						this.$refs[item.source][0],
+						this.$refs[item.target][0],
+						item.label,
+						item.strokeColor,
+						item.paddingTop,
+						item.paddingRight,
+						item.paddingBottom,
+						item.paddingLeft,
+						item.connector,
+						{ ...item.overlay, width: 14, length: 14 }
+					);
+				}
+			} else if (window.matchMedia("(max-width: 584px)").matches) {
+				for (const item of this.connectorDataMaxDeviceWidth584) {
+					this.instanceConnect(
+						item.endpoint,
+						this.$refs[item.source][0],
+						this.$refs[item.target][0],
+						item.label,
+						item.strokeColor,
+						item.paddingTop,
+						item.paddingRight,
+						item.paddingBottom,
+						item.paddingLeft,
+						item.connector,
+						item.overlay
+					);
+				}
+			} else {
+				for (const item of this.connectorData) {
+					this.instanceConnect(
+						item.endpoint,
+						this.$refs[item.source][0],
+						this.$refs[item.target][0],
+						item.label,
+						item.strokeColor,
+						item.paddingTop,
+						item.paddingRight,
+						item.paddingBottom,
+						item.paddingLeft,
+						item.connector,
+						item.overlay
+					);
+				}
 			}
 		},
 	};
@@ -373,6 +577,7 @@
 
 <style lang="scss" scoped>
 	.roadmap {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -386,6 +591,18 @@
 			#805cc8 49.48%,
 			#9e6dff 100%
 		);
+
+		@media only screen and (max-width: 896px) {
+			padding: 3rem 0;
+		}
+
+		@media only screen and (max-width: 834px) {
+			padding: 0;
+		}
+
+		@media only screen and (max-width: 568px) {
+			padding: 3rem 0;
+		}
 
 		.text {
 			margin-bottom: 7%;
@@ -421,10 +638,30 @@
 			justify-items: center;
 			align-items: center;
 			width: fit-content;
-			max-width: 90%;
 			max-height: 70vh;
 			grid-gap: 2rem;
 			row-gap: 10rem;
+
+			@media only screen and (max-width: 584px) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				grid-gap: 0;
+				row-gap: 0;
+				width: 40%;
+			}
+
+			@media only screen and (max-width: 416px) {
+				width: 45%;
+			}
+
+			@media only screen and (max-width: 320px) {
+				width: 45%;
+			}
+
+			@media only screen and (max-width: 658px) and (orientation: landscape) {
+				max-height: fit-content;
+			}
 
 			.chart__item {
 				position: relative;
@@ -449,6 +686,72 @@
 
 				@media only screen and (max-width: 1512px) {
 					font-size: 2.2rem;
+				}
+
+				@media only screen and (max-width: 1400px) {
+					width: 10rem;
+					height: 10rem;
+				}
+
+				@media only screen and (max-width: 1300px) {
+					width: 9rem;
+					height: 9rem;
+				}
+
+				@media only screen and (max-width: 1200px) {
+					width: 8rem;
+					height: 8rem;
+					font-size: 1.9rem;
+				}
+
+				@media only screen and (max-width: 1024px) {
+					width: 6.5rem;
+					height: 6.5rem;
+					font-size: 1.5rem;
+				}
+
+				@media only screen and (max-width: 934px) {
+					width: 5.5rem;
+					height: 5.5rem;
+					font-size: 1.2rem;
+				}
+
+				@media only screen and (max-width: 896px) {
+					width: 5rem;
+					height: 5rem;
+					font-size: 1.1rem;
+				}
+
+				@media only screen and (max-width: 844px) {
+					width: 4.5rem;
+					height: 4.5rem;
+					font-size: 1rem;
+				}
+
+				@media only screen and (max-width: 768px) {
+					width: 3.8rem;
+					height: 3.8rem;
+					font-size: 0.9rem;
+				}
+
+				@media only screen and (max-width: 584px) {
+					&:nth-child(odd) {
+						align-self: flex-start;
+					}
+
+					&:nth-child(even) {
+						align-self: flex-end;
+					}
+
+					width: 6rem;
+					height: 6rem;
+					font-size: 1.3rem;
+				}
+
+				@media only screen and (max-width: 320px) {
+					width: 4rem;
+					height: 4rem;
+					font-size: 0.9rem;
 				}
 
 				&.active-quarter {

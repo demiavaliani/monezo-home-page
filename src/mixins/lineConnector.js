@@ -59,6 +59,8 @@ export default {
 			overlay = {
 				type: "plain-arrow",
 				location: 0.5,
+				width: 22,
+				length: 22,
 			}
 		) {
 			if (overlay.type === "plain-arrow") {
@@ -73,8 +75,8 @@ export default {
 							type: "PlainArrow",
 							options: {
 								location: overlay.location,
-								width: 22,
-								length: 22,
+								width: overlay.width,
+								length: overlay.length,
 								foldback: 1,
 							},
 						},
