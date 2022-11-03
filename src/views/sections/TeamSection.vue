@@ -89,6 +89,14 @@
 			#d98d9c 100%
 		);
 
+		@media only screen and (max-width: 584px) {
+			padding: 5rem 5rem;
+		}
+
+		@media only screen and (max-width: 416px) {
+			padding: 5rem 3rem;
+		}
+
 		.text {
 			font-family: "Poppins";
 			&--top {
@@ -121,6 +129,26 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			gap: 6rem;
+
+			@media only screen and (max-width: 1280px) {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				width: 80%;
+			}
+
+			@media only screen and (max-width: 768px) {
+				column-gap: 3rem;
+			}
+
+			@media only screen and (max-width: 584px) {
+				grid-template-columns: repeat(2, 1fr);
+				column-gap: 5rem;
+			}
+
+			@media only screen and (max-width: 416px) {
+				grid-template-columns: 1fr;
+				column-gap: 5rem;
+			}
 		}
 	}
 </style>
