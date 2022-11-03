@@ -83,7 +83,11 @@
 			height: 53%;
 			min-height: 53vh;
 			background: linear-gradient(266.21deg, #002199 0%, #0d40f2 100%);
-			padding: 10rem 0;
+
+			@media only screen and (min-height: 1150px) {
+				flex-grow: 1;
+				padding: 0;
+			}
 
 			.text {
 				&--large {
@@ -110,6 +114,15 @@
 			border-left: 0;
 			border-right: 0;
 
+			@media only screen and (min-height: 1150px) {
+				height: fit-content;
+				min-height: fit-content;
+			}
+
+			@media only screen and (max-width: 584px) {
+				flex-direction: column;
+			}
+
 			.description,
 			.contacts,
 			.subscription {
@@ -119,6 +132,16 @@
 				justify-content: center;
 				align-items: flex-start;
 				padding: 5rem 0;
+
+				@media only screen and (max-width: 584px) {
+					width: 100% !important;
+					max-width: 100% !important;
+					padding: 5rem 7rem !important;
+				}
+
+				@media only screen and (max-width: 320px) {
+					padding: 5rem !important;
+				}
 			}
 
 			.description {
@@ -156,6 +179,13 @@
 				border-top: 0;
 				border-bottom: 0;
 
+				@media only screen and (max-width: 584px) {
+					border-top: 1px solid $monezo-black;
+					border-bottom: 1px solid $monezo-black;
+					border-left: 0;
+					border-right: 0;
+				}
+
 				p {
 					text-align: left;
 					color: $monezo-black;
@@ -173,6 +203,7 @@
 					color: $monezo-persian-blue;
 					font-weight: 500;
 				}
+
 				& :nth-child(2) {
 					font-weight: 700;
 				}
@@ -213,11 +244,17 @@
 					color: $monezo-tundora;
 					font-size: 1.4rem;
 				}
-
 				.subscribe-input {
 					display: flex;
 					gap: 1.8rem;
 					width: 100%;
+
+					@media only screen and (max-width: 1024px) {
+						flex-direction: column;
+						gap: 0;
+						margin: 0 0 1.8rem;
+						align-items: center;
+					}
 
 					input {
 						box-sizing: border-box;
@@ -228,6 +265,10 @@
 						border: 1px solid $monezo-black;
 						background-color: $monezo-concrete;
 
+						@media only screen and (max-width: 1024px) {
+							width: 100%;
+						}
+
 						&::placeholder {
 							color: $monezo-emperor;
 							font-family: "Poppins";
@@ -237,6 +278,30 @@
 							@media only screen and (max-width: 1512px) {
 								font-size: 1.3rem;
 							}
+						}
+					}
+
+					@media only screen and (max-width: 1024px) {
+						.button-navigation {
+							width: 100% !important;
+						}
+					}
+
+					@media only screen and (max-width: 584px) {
+						.button-navigation {
+							width: 40% !important;
+						}
+					}
+
+					@media only screen and (max-width: 416px) {
+						.button-navigation {
+							width: 60% !important;
+						}
+					}
+
+					@media only screen and (max-width: 320px) {
+						.button-navigation {
+							width: 100% !important;
 						}
 					}
 				}
@@ -268,6 +333,10 @@
 				display: flex;
 				gap: 4rem;
 				color: $monezo-black;
+
+				@media only screen and (max-width: 1024px) {
+					display: none;
+				}
 			}
 		}
 	}
