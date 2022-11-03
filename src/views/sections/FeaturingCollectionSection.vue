@@ -17,13 +17,13 @@
 
 			<div class="numbers-description">
 				<div class="numbers-description__left">
-					<p class="text text__large">$100</p>
-					<p class="text text__small">Invest from</p>
+					<p class="text text--large">$100</p>
+					<p class="text text--small">Invest from</p>
 				</div>
 
 				<div class="numbers-description__right">
-					<p class="text text__large">12% APY</p>
-					<p class="text text__small">Paid daily</p>
+					<p class="text text--large">12% APY</p>
+					<p class="text text--small">Paid daily</p>
 				</div>
 			</div>
 
@@ -100,7 +100,7 @@
 			.numbers-description {
 				display: flex;
 				gap: 7rem;
-				.text__large {
+				.text--large {
 					margin-bottom: 0;
 				}
 			}
