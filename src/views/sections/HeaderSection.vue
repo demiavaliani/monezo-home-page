@@ -43,6 +43,18 @@
 		min-height: 75vh;
 		background: linear-gradient(95.78deg, #002199 0%, #0d40f2 100%);
 
+		@media only screen and (min-height: 1400px) {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@media only screen and (max-width: 584px) {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+
 		&__left-description {
 			box-sizing: border-box;
 			display: flex;
@@ -52,15 +64,40 @@
 			width: 36%;
 			padding: 5rem 0;
 
+			@media only screen and (min-height: 1400px) {
+				align-items: center;
+			}
+
+			@media only screen and (max-width: 584px) {
+				align-items: center;
+				width: 70%;
+			}
+
 			& .text {
 				margin-bottom: 3.6rem;
 				text-align: left;
+
+				@media only screen and (min-height: 1400px) {
+					text-align: center;
+				}
+
+				@media only screen and (max-width: 584px) {
+					text-align: center;
+				}
 
 				&--large {
 					font-family: "Syne";
 					font-size: 6.4rem;
 					font-weight: 700;
 					color: $monezo-lima-green;
+
+					@media only screen and (max-width: 416px) {
+						font-size: 4rem;
+					}
+
+					@media only screen and (max-width: 320px) {
+						font-size: 3rem;
+					}
 				}
 
 				&--small {
@@ -68,6 +105,10 @@
 					font-size: 1.8rem;
 					font-weight: 400;
 					color: $monezo-white;
+
+					@media only screen and (max-width: 320px) {
+						font-size: 1.6rem;
+					}
 				}
 			}
 		}
@@ -77,6 +118,18 @@
 			justify-content: center;
 			align-items: flex-end;
 			width: 37%;
+
+			@media only screen and (min-height: 1400px) {
+				width: 60%;
+			}
+
+			@media only screen and (max-width: 1024px) {
+				width: 50%;
+			}
+
+			@media only screen and (max-width: 584px) {
+				width: 70%;
+			}
 
 			img {
 				width: 100%;
