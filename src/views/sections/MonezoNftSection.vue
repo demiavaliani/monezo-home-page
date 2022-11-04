@@ -1,6 +1,24 @@
 <template>
 	<div class="monezo-nft-section">
-		<div class="monezo-nft-section__left-image">
+		<div
+			v-if="isMobileDevice"
+			:class="[
+				'monezo-nft-section__left-image',
+				{ isMobileDevice: isMobileDevice },
+			]"
+			@mouseenter="pauseAnimation"
+			@mouseleave="pauseAnimation"
+		>
+			<img
+				class="image-bottom"
+				src="@/assets/images/monezo-nft-section-monkers-right.png"
+			/>
+			<img
+				class="image-top"
+				src="@/assets/images/monezo-nft-section-monkers-left.png"
+			/>
+		</div>
+		<div v-else class="monezo-nft-section__left-image">
 			<img src="@/assets/images/monezo-nft-section-monkers-group.png" />
 		</div>
 
@@ -33,6 +51,19 @@
 		name: "MonezoNftSection",
 
 		components: { ButtonPrimary },
+
+		computed: {
+			isMobileDevice() {
+				return window.matchMedia("(max-width: 416px)").matches;
+			},
+		},
+
+		methods: {
+			pauseAnimation() {
+				const element = document.querySelector(".image-top");
+				element.classList.toggle("paused");
+			},
+		},
 	};
 </script>
 
@@ -52,17 +83,76 @@
 			#7eff2a 100%
 		);
 
+		@media only screen and (max-width: 834px) {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+
+		@media only screen and (max-width: 768px) {
+			row-gap: 5rem;
+		}
+
 		&__left-image {
+			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 49%;
+
+			&.isMobileDevice {
+				img {
+					position: absolute;
+				}
+			}
+
+			@media only screen and (max-width: 834px) {
+				width: 70%;
+			}
+
+			@media only screen and (max-width: 584px) {
+				width: 80%;
+			}
+
+			@media only screen and (max-width: 416px) {
+				height: 50vh;
+			}
+
+			@media only screen and (max-width: 320px) {
+				height: 60vh;
+			}
 
 			img {
 				width: 100%;
 				height: auto;
 				max-height: 90%;
 				object-fit: contain;
+
+				&.image-top {
+					animation: fade-in 10s ease-in-out infinite;
+
+					&.paused {
+						animation-play-state: paused;
+					}
+				}
+			}
+
+			@keyframes fade-in {
+				0% {
+					opacity: 0;
+				}
+				10% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 1;
+				}
+				60% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 0;
+				}
 			}
 		}
 
@@ -73,9 +163,22 @@
 			justify-content: center;
 			width: 35vw;
 
+			@media only screen and (max-width: 834px) {
+				align-items: center;
+				width: 50vw;
+			}
+
+			@media only screen and (max-width: 584px) {
+				width: 75vw;
+			}
+
 			& .text {
 				margin-bottom: 3.6rem;
 				text-align: left;
+
+				@media only screen and (max-width: 834px) {
+					text-align: center;
+				}
 
 				&--top {
 					margin-bottom: 1.8rem;
