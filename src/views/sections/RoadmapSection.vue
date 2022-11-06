@@ -28,6 +28,7 @@
 				"
 			>
 				{{ box.text }}
+				<div class="jsplumb-element" :ref="box.name"></div>
 			</div>
 		</div>
 
@@ -828,5 +829,11 @@
 			font-size: 1.6rem;
 			font-weight: 400;
 		}
+	}
+
+	.jsplumb-element {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 	}
 </style>

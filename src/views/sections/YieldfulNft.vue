@@ -13,9 +13,11 @@
 				v-for="(boxData, index) in boxDataSchemeMaxWidth834"
 				:key="boxData.id"
 				:ref="boxData.name"
-				v-popover:yieldful-tooltip.top
+				class="jsplumb-element-wrapper"
 			>
+				<div class="jsplumb-element" :ref="boxData.name"></div>
 				<YieldfulBox
+					v-popover:yieldful-tooltip.top
 					:style="boxDataScheme[index]"
 					:src="boxData.name"
 					:text="boxData.text"
@@ -32,10 +34,12 @@
 			<div
 				v-for="(boxData, index) in boxDataScheme"
 				:key="boxData.id"
-				:ref="boxData.name"
-				v-popover:yieldful-tooltip.top
+				class="jsplumb-element-wrapper"
 			>
+				<div class="jsplumb-element" :ref="boxData.name"></div>
+
 				<YieldfulBox
+					v-popover:yieldful-tooltip.top
 					:style="boxDataScheme[index]"
 					:src="boxData.name"
 					:text="boxData.text"
@@ -854,6 +858,12 @@
 			},
 		},
 
+		methods: {
+			logMessage() {
+				console.log("logged");
+			},
+		},
+
 		mounted() {
 			this.init(this.$refs["boxes-wrapper"]);
 			if (window.matchMedia("(max-width: 360px)").matches) {
@@ -1031,6 +1041,18 @@
 				font-size: 1rem;
 			}
 		}
+	}
+
+	.jsplumb-element-wrapper {
+		position: relative;
+		width: max-content;
+		height: max-content;
+	}
+	.jsplumb-element {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
 	}
 </style>
 

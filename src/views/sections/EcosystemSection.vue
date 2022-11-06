@@ -14,7 +14,6 @@
 			<div
 				v-for="(box, index) in boxesData"
 				:key="box.id"
-				:ref="box.name"
 				:style="boxesData[index]"
 				:class="['chart__item', `chart__item-${box.class}`]"
 				v-popover:eco-tooltip.top
@@ -24,6 +23,7 @@
 				"
 			>
 				{{ box.text }}
+				<div class="jsplumb-element" :ref="box.name"></div>
 			</div>
 			<div v-if="!isMobileDevice" class="logo" ref="logo">
 				<img src="@/assets/images/monezo-logo.png" />
@@ -1057,5 +1057,11 @@
 				max-width: 20rem !important;
 			}
 		}
+	}
+
+	.jsplumb-element {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 	}
 </style>
