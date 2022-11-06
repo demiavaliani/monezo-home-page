@@ -52,7 +52,7 @@
 
 		<popover
 			name="yieldful-tooltip"
-			:event="'click'"
+			:event="'hover'"
 			:pointer="false"
 			:style="{ backgroundColor: tooltipBgColor }"
 			>{{ tooltipText }}</popover
@@ -420,7 +420,7 @@
 					},
 				],
 
-				connectorDataMaxDeviceWidth320: [
+				connectorDataMaxDeviceWidth360: [
 					{
 						endpoint: {
 							endpoint: "Blank",
@@ -856,8 +856,8 @@
 
 		mounted() {
 			this.init(this.$refs["boxes-wrapper"]);
-			if (window.matchMedia("(max-width: 320px)").matches) {
-				for (const item of this.connectorDataMaxDeviceWidth320) {
+			if (window.matchMedia("(max-width: 360px)").matches) {
+				for (const item of this.connectorDataMaxDeviceWidth360) {
 					this.instanceConnect(
 						item.endpoint,
 						this.$refs[item.source][0],
@@ -872,7 +872,7 @@
 						{ type: "plain-arrow", location: 0.5, width: 18, length: 18 }
 					);
 				}
-			} else if (window.matchMedia("(max-width: 416px)").matches) {
+			} else if (window.matchMedia("(max-width: 430px)").matches) {
 				for (const item of this.connectorDataMaxDeviceWidth416) {
 					this.instanceConnect(
 						item.endpoint,
@@ -985,7 +985,7 @@
 				margin-bottom: 5rem;
 			}
 
-			@media only screen and (max-width: 416px) {
+			@media only screen and (max-width: 430px) {
 				column-gap: 8rem;
 			}
 		}
@@ -1018,7 +1018,7 @@
 				font-size: 1.5rem;
 			}
 
-			@media only screen and (max-width: 416px) {
+			@media only screen and (max-width: 430px) {
 				font-size: 1.3rem;
 			}
 
@@ -1026,7 +1026,7 @@
 				font-size: 1.2rem;
 			}
 
-			@media only screen and (max-width: 320px) {
+			@media only screen and (max-width: 360px) {
 				max-width: 14rem !important;
 				font-size: 1rem;
 			}
@@ -1051,7 +1051,7 @@
 				font-size: 1.5rem;
 			}
 
-			@media only screen and (max-width: 416px) {
+			@media only screen and (max-width: 430px) {
 				font-size: 1.3rem;
 			}
 
@@ -1059,7 +1059,7 @@
 				font-size: 1.2rem;
 			}
 
-			@media only screen and (max-width: 320px) {
+			@media only screen and (max-width: 360px) {
 				font-size: 1rem;
 			}
 		}

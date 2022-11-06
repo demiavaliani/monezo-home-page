@@ -145,7 +145,7 @@
 				column-gap: 5rem;
 			}
 
-			@media only screen and (max-width: 416px) {
+			@media only screen and (max-width: 430px) {
 				grid-template-columns: 1fr;
 				column-gap: 5rem;
 			}

@@ -1,9 +1,15 @@
 <template>
 	<div class="join-monezo-section">
 		<div class="top">
-			<p class="text--large">Join Monezo Platform</p>
-			<p class="text--small">Stake your NFT and track your earnings</p>
-			<ButtonPrimary text="Access Dashboard" width="16.9rem" bg-color="blue" />
+			<div class="text">
+				<p class="text--large">Join Monezo Platform</p>
+				<p class="text--small">Stake your NFT and track your earnings</p>
+				<ButtonPrimary
+					text="Access Dashboard"
+					width="16.9rem"
+					bg-color="blue"
+				/>
+			</div>
 		</div>
 		<div class="middle">
 			<div class="description">
@@ -74,12 +80,10 @@
 		min-height: 100vh;
 
 		.top {
-			box-sizing: border-box;
+			width: 100%;
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			gap: 3.6rem;
 			height: 53%;
 			min-height: 53vh;
 			background: linear-gradient(266.21deg, #002199 0%, #0d40f2 100%);
@@ -90,6 +94,17 @@
 			}
 
 			.text {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 3.6rem;
+
+				@media only screen and (max-width: 430px) {
+					width: 80%;
+				}
+
 				&--large {
 					color: $monezo-lima-green;
 					font-family: "Syne";
@@ -132,6 +147,11 @@
 				justify-content: center;
 				align-items: flex-start;
 				padding: 5rem 0;
+
+				@media only screen and (max-width: 834px) {
+					padding-left: 4rem !important;
+					padding-right: 4rem !important;
+				}
 
 				@media only screen and (max-width: 584px) {
 					width: 100% !important;

@@ -607,6 +607,10 @@
 		.text {
 			margin-bottom: 7%;
 
+			@media only screen and (max-width: 584px) {
+				width: 80%;
+			}
+
 			&--top {
 				margin-bottom: 1.8rem;
 				color: $monezo-black;

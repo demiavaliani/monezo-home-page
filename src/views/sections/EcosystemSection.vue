@@ -25,7 +25,7 @@
 			>
 				{{ box.text }}
 			</div>
-			<div class="logo" ref="logo">
+			<div v-if="!isMobileDevice" class="logo" ref="logo">
 				<img src="@/assets/images/monezo-logo.png" />
 			</div>
 		</div>
@@ -202,7 +202,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 1, 0, 1, 0, -1],
-								[0.5, 0, 0, -1, -50, 17],
+								[0.5, 0, 0, -1, -50, 20],
 							],
 						},
 						source: "credit",
@@ -257,7 +257,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 1, 0, 1, 0, -1],
-								[0.5, 0, 0, -1, 50, 17],
+								[0.5, 0, 0, -1, 50, 20],
 							],
 						},
 						source: "care",
@@ -276,7 +276,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 1, 0, 1, 0, -1],
-								[0, 0.5, 0, 0, 17, -50],
+								[0, 0.5, 0, 0, 17, -30],
 							],
 						},
 						source: "perks",
@@ -294,7 +294,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 1, 0, 1, 0, -1],
-								[1, 0.5, 0, 0, -17, -50],
+								[1, 0.5, 0, 0, -17, -30],
 							],
 						},
 						source: "tools",
@@ -333,7 +333,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[0, 0.5, 0, 0, 17, 50],
+								[0, 0.5, 0, 0, 17, 30],
 							],
 						},
 						source: "marketplace",
@@ -351,7 +351,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[1, 0.5, 0, 0, -17, 50],
+								[1, 0.5, 0, 0, -17, 30],
 							],
 						},
 						source: "institutional",
@@ -369,7 +369,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[0.5, 1, 0, 1, -50, -17],
+								[0.5, 1, 0, 1, -50, -20],
 							],
 						},
 						source: "incubator",
@@ -424,7 +424,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[0.5, 1, 0, 1, 50, -17],
+								[0.5, 1, 0, 1, 50, -20],
 							],
 						},
 						source: "charity",
@@ -439,26 +439,300 @@
 						overlay: false,
 					},
 				],
+
+				connectorDataMaxWidth834: [
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 1, 0, 1, 0, -1],
+								[0.5, 0, 0, -1, -32, 12],
+							],
+						},
+						source: "credit",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								midpoint: "0.21",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.5, 1, 0, -1, 0],
+								[0.5, 0, 0, 0, -11, 2],
+							],
+						},
+						source: "nft",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0, 0.5, -1, 0, 1, 0],
+								[0.5, 0, 0, 0, 11, 2],
+							],
+						},
+						source: "metaverse",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 1, 0, 1, 0, -1],
+								[0.5, 0, 0, -1, 32, 12],
+							],
+						},
+						source: "care",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								midpoint: "0.21",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 1, 0, 1, 0, -1],
+								[0, 0.5, 0, 0, 17, -20],
+							],
+						},
+						source: "perks",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 1, 0, 1, 0, -1],
+								[1, 0.5, 0, 0, -17, -20],
+							],
+						},
+						source: "tools",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.5, 1, 0, -1, 0],
+								[0, 0.5, -1, 0],
+							],
+						},
+						source: "wallet",
+						connector: "Flowchart",
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: ["Left", "Right"],
+						},
+						source: "card",
+						connector: "Flowchart",
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 0, 0, -1, 0, 1],
+								[0, 0.5, 0, 0, 17, 20],
+							],
+						},
+						source: "marketplace",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 0, 0, -1, 0, 1],
+								[1, 0.5, 0, 0, -17, 20],
+							],
+						},
+						source: "institutional",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 0, 0, -1, 0, 1],
+								[0.5, 1, 0, 1, -32, -12],
+							],
+						},
+						source: "incubator",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								midpoint: "0.21",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[1, 0.5, 1, 0, -1, 0],
+								[0.5, 1, 0, 0, -11, -2],
+							],
+						},
+						source: "academy",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0, 0.5, -1, 0, 1, 0],
+								[0.5, 1, 0, 0, 11, -2],
+							],
+						},
+						source: "all-in-one",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+					{
+						endpoint: {
+							endpoint: "Blank",
+							anchors: [
+								[0.5, 0, 0, -1, 0, 1],
+								[0.5, 1, 0, 1, 32, -13],
+							],
+						},
+						source: "charity",
+						connector: {
+							type: "Flowchart",
+							options: {
+								stub: "0",
+								midpoint: "0.21",
+								cornerRadius: "15",
+							},
+						},
+						overlay: false,
+					},
+				],
 			};
 		},
 
-		mounted() {
-			this.init(this.$refs["chart"]);
+		computed: {
+			isTabletDevice() {
+				return window.matchMedia("(max-width: 834px)").matches;
+			},
 
-			for (const item of this.connectorData) {
-				this.instanceConnect(
-					item.endpoint,
-					this.$refs[item.source][0],
-					this.$refs["logo"],
-					item.label,
-					item.strokeColor,
-					item.paddingTop,
-					item.paddingRight,
-					item.paddingBottom,
-					item.paddingLeft,
-					item.connector,
-					item.overlay
-				);
+			isMobileDevice() {
+				return window.matchMedia("(max-width: 584px)").matches;
+			},
+		},
+
+		mounted() {
+			if (!this.isMobileDevice) {
+				this.init(this.$refs["chart"]);
+
+				if (this.isTabletDevice) {
+					for (const item of this.connectorDataMaxWidth834) {
+						this.instanceConnect(
+							item.endpoint,
+							this.$refs[item.source][0],
+							this.$refs["logo"],
+							item.label,
+							item.strokeColor,
+							item.paddingTop,
+							item.paddingRight,
+							item.paddingBottom,
+							item.paddingLeft,
+							item.connector,
+							item.overlay
+						);
+					}
+				} else {
+					for (const item of this.connectorData) {
+						this.instanceConnect(
+							item.endpoint,
+							this.$refs[item.source][0],
+							this.$refs["logo"],
+							item.label,
+							item.strokeColor,
+							item.paddingTop,
+							item.paddingRight,
+							item.paddingBottom,
+							item.paddingLeft,
+							item.connector,
+							item.overlay
+						);
+					}
+				}
 			}
 		},
 	};
@@ -466,13 +740,15 @@
 
 <style lang="scss" scoped>
 	.ecosystem {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		min-height: 100vh;
+		padding: 3rem 0;
 		background: linear-gradient(
 			250.11deg,
 			#1f6728 0%,
@@ -480,14 +756,40 @@
 			#7eff2a 100%
 		);
 
+		@media only screen and (max-width: 584px) {
+			width: 100vw;
+			padding: 5rem 0;
+		}
+
+		@media only screen and (max-width: 320px) {
+			padding: 3rem 0;
+		}
+
 		.text {
+			@media only screen and (max-width: 584px) {
+				margin-bottom: 5rem;
+			}
+
+			@media only screen and (max-width: 430px) {
+				width: 80%;
+				margin-bottom: 3rem;
+			}
+
 			&--top {
-				margin-top: 3rem;
 				margin-bottom: 1.8rem;
 				color: $monezo-black;
 				font-family: "Poppins";
 				font-size: 1.8rem;
 				font-weight: 400;
+
+				@media only screen and (max-width: 430px) {
+					font-size: 1.6rem;
+				}
+
+				@media only screen and (max-width: 320px) {
+					margin-bottom: 1rem;
+					font-size: 1.4rem;
+				}
 			}
 
 			&--large {
@@ -496,6 +798,14 @@
 				font-family: "Syne";
 				font-size: 3.2rem;
 				font-weight: 700;
+
+				@media only screen and (max-width: 430px) {
+					font-size: 3.2rem;
+				}
+
+				@media only screen and (max-width: 320px) {
+					margin-bottom: 2rem;
+				}
 			}
 
 			&--small {
@@ -503,6 +813,14 @@
 				font-family: "Poppins";
 				font-size: 1.8rem;
 				font-weight: 400;
+
+				@media only screen and (max-width: 430px) {
+					font-size: 1.6rem;
+				}
+
+				@media only screen and (max-width: 320px) {
+					font-size: 1.4rem;
+				}
 			}
 		}
 
@@ -524,6 +842,40 @@
 			@media only screen and (max-width: 1200px) {
 				width: 90%;
 				height: 35vh;
+			}
+
+			@media only screen and (max-width: 584px) {
+				box-sizing: border-box;
+				grid-template: none;
+				grid-auto-flow: column;
+				grid-template-columns: repeat(5, 100%);
+				grid-template-rows: repeat(3, 20%);
+				align-content: space-between;
+				width: 100%;
+				height: 50%;
+				padding: 2rem 12rem;
+				overflow-x: scroll;
+				column-gap: 7rem;
+
+				&::-webkit-scrollbar {
+					display: none; /* Chrome, Safari and Opera */
+				}
+
+				& {
+					-ms-overflow-style: none; /* IE and Edge */
+					scrollbar-width: none; /* Firefox */
+				}
+			}
+
+			@media only screen and (max-width: 430px) {
+				padding: 2rem 8rem;
+				column-gap: 6rem;
+			}
+
+			@media only screen and (max-width: 320px) {
+				padding: 1rem 6rem;
+				column-gap: 4rem;
+				height: 70%;
 			}
 
 			.chart__item {
@@ -548,6 +900,12 @@
 				@media only screen and (max-width: 1512px) {
 					height: 4.4rem;
 					font-size: 1.6rem;
+				}
+
+				@media only screen and (max-width: 834px) {
+					height: 4.4rem;
+					padding: 0 0.5rem;
+					font-size: 1.4rem;
 				}
 
 				// ROW - 1
@@ -634,6 +992,21 @@
 					justify-self: center;
 					width: 75%;
 				}
+
+				@media only screen and (max-width: 584px) {
+					grid-area: auto;
+					justify-self: center;
+					width: 100%;
+					height: 100%;
+					left: auto;
+					right: auto;
+					padding: 0;
+				}
+
+				@media only screen and (max-width: 430px) {
+					box-sizing: border-box;
+					padding: 0 2rem;
+				}
 			}
 
 			.logo {
@@ -667,6 +1040,22 @@
 			font-family: "Poppins";
 			font-size: 1.6rem;
 			font-weight: 400;
+
+			@media only screen and (max-width: 1280px) {
+				max-width: 40rem !important;
+			}
+
+			@media only screen and (max-width: 1200px) {
+				max-width: 30rem !important;
+			}
+
+			@media only screen and (max-width: 1024px) {
+				max-width: 25rem !important;
+			}
+
+			@media only screen and (max-width: 834px) {
+				max-width: 20rem !important;
+			}
 		}
 	}
 </style>

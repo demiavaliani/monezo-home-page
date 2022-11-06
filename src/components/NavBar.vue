@@ -5,14 +5,16 @@
 			id="nav-bar"
 			:class="['nav-bar', { 'is-mobile-device': isMobileDevice }]"
 		>
-			<a href="#" class="nav-bar__title-text">Monezo</a>
-			<a href="#" class="nav-bar__items-text">Marketplace</a>
-			<a href="#" class="nav-bar__items-text">Incubator</a>
-			<a href="#" class="nav-bar__items-text">Institutional</a>
-			<a href="#" class="nav-bar__items-text">How It Works</a>
-			<a href="#" class="nav-bar__items-text">About Us</a>
-			<a href="#" class="nav-bar__items-text">Academy</a>
-			<a href="#" class="nav-bar__items-text">Blog</a>
+			<a href="javascript:void(0);" class="nav-bar__title-text">Monezo</a>
+			<a href="javascript:void(0);" class="nav-bar__items-text">Marketplace</a>
+			<a href="javascript:void(0);" class="nav-bar__items-text">Incubator</a>
+			<a href="javascript:void(0);" class="nav-bar__items-text"
+				>Institutional</a
+			>
+			<a href="javascript:void(0);" class="nav-bar__items-text">How It Works</a>
+			<a href="javascript:void(0);" class="nav-bar__items-text">About Us</a>
+			<a href="javascript:void(0);" class="nav-bar__items-text">Academy</a>
+			<a href="javascript:void(0);" class="nav-bar__items-text">Blog</a>
 			<ButtonNavigation text="All-in-One App" width="14.4rem" />
 			<a href="javascript:void(0);" class="hamburger" @click="expandNavbar">
 				<img src="@/assets/images/hamburger.svg" />
@@ -21,17 +23,23 @@
 
 		<div v-else class="nav-bar">
 			<div class="nav-bar__title">
-				<a href="#" class="nav-bar__title-text">Monezo</a>
+				<a href="javascript:void(0);" class="nav-bar__title-text">Monezo</a>
 			</div>
 
 			<div class="nav-bar__items">
-				<a href="#" class="nav-bar__items-text">Marketplace</a>
-				<a href="#" class="nav-bar__items-text">Incubator</a>
-				<a href="#" class="nav-bar__items-text">Institutional</a>
-				<a href="#" class="nav-bar__items-text">How It Works</a>
-				<a href="#" class="nav-bar__items-text">About Us</a>
-				<a href="#" class="nav-bar__items-text">Academy</a>
-				<a href="#" class="nav-bar__items-text">Blog</a>
+				<a href="javascript:void(0);" class="nav-bar__items-text"
+					>Marketplace</a
+				>
+				<a href="javascript:void(0);" class="nav-bar__items-text">Incubator</a>
+				<a href="javascript:void(0);" class="nav-bar__items-text"
+					>Institutional</a
+				>
+				<a href="javascript:void(0);" class="nav-bar__items-text"
+					>How It Works</a
+				>
+				<a href="javascript:void(0);" class="nav-bar__items-text">About Us</a>
+				<a href="javascript:void(0);" class="nav-bar__items-text">Academy</a>
+				<a href="javascript:void(0);" class="nav-bar__items-text">Blog</a>
 			</div>
 
 			<div class="nav-bar__button-wrapper">
@@ -126,22 +134,11 @@
 				img {
 					display: block;
 					animation: clickClose 0.1s linear;
-
-					@media only screen and (max-width: 416px) {
-						animation-name: none;
-					}
 				}
 
 				@keyframes clickClose {
-					0% {
-						height: 5rem;
-					}
 					50% {
-						width: 5.3rem;
-						height: 5.3rem;
-					}
-					100% {
-						height: 5rem;
+						scale: 1.2;
 					}
 				}
 			}
@@ -170,15 +167,8 @@
 					}
 
 					@keyframes clickOpen {
-						0% {
-							height: 5rem;
-						}
 						50% {
-							width: 5.3rem;
-							height: 5.3rem;
-						}
-						100% {
-							height: 5rem;
+							scale: 1.2;
 						}
 					}
 
@@ -197,18 +187,24 @@
 						top: 1.2rem;
 					}
 
+					@media only screen and (max-width: 430px) {
+						right: 2.1rem;
+						top: 1.2rem;
+					}
+
 					@media only screen and (max-width: 416px) {
 						right: 2.1rem;
 						top: 1.6rem;
-
-						& img {
-							animation-name: none;
-						}
 					}
 
 					@media only screen and (max-width: 390px) {
 						right: 3.7rem;
 						top: 1.4rem;
+					}
+
+					@media only screen and (max-width: 360px) {
+						right: 3.1rem;
+						top: 1rem;
 					}
 
 					@media only screen and (max-width: 320px) {
