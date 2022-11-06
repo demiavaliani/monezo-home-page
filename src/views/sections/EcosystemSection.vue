@@ -201,8 +201,8 @@
 						endpoint: {
 							endpoint: "Blank",
 							anchors: [
-								[0.5, 1, 0, 1, 0, 0],
-								[0.5, 0, 0, -1, -50, 13],
+								[0.5, 1, 0, 1, 0, -1],
+								[0.5, 0, 0, -1, -50, 17],
 							],
 						},
 						source: "credit",
@@ -210,7 +210,7 @@
 							type: "Flowchart",
 							options: {
 								stub: "0",
-								midpoint: "0.3",
+								midpoint: "0.26",
 								cornerRadius: "15",
 							},
 						},
@@ -256,8 +256,8 @@
 						endpoint: {
 							endpoint: "Blank",
 							anchors: [
-								[0.5, 1, 0, 1, 0, 0],
-								[0.5, 0, 0, -1, 50, 13],
+								[0.5, 1, 0, 1, 0, -1],
+								[0.5, 0, 0, -1, 50, 17],
 							],
 						},
 						source: "care",
@@ -265,7 +265,7 @@
 							type: "Flowchart",
 							options: {
 								stub: "0",
-								midpoint: "0.3",
+								midpoint: "0.26",
 								cornerRadius: "15",
 							},
 						},
@@ -276,7 +276,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 1, 0, 1, 0, -1],
-								[0, 0.5, 0, 0, 13, -50],
+								[0, 0.5, 0, 0, 17, -50],
 							],
 						},
 						source: "perks",
@@ -294,7 +294,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 1, 0, 1, 0, -1],
-								[1, 0.5, 0, 0, -13, -50],
+								[1, 0.5, 0, 0, -17, -50],
 							],
 						},
 						source: "tools",
@@ -333,7 +333,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[0, 0.5, 0, 0, 13, 50],
+								[0, 0.5, 0, 0, 17, 50],
 							],
 						},
 						source: "marketplace",
@@ -351,7 +351,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[1, 0.5, 0, 0, -13, 50],
+								[1, 0.5, 0, 0, -17, 50],
 							],
 						},
 						source: "institutional",
@@ -369,7 +369,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[0.5, 1, 0, 1, -50, -13],
+								[0.5, 1, 0, 1, -50, -17],
 							],
 						},
 						source: "incubator",
@@ -377,7 +377,7 @@
 							type: "Flowchart",
 							options: {
 								stub: "0",
-								midpoint: "0.3",
+								midpoint: "0.25",
 								cornerRadius: "15",
 							},
 						},
@@ -424,7 +424,7 @@
 							endpoint: "Blank",
 							anchors: [
 								[0.5, 0, 0, -1, 0, 1],
-								[0.5, 1, 0, 1, 50, -13],
+								[0.5, 1, 0, 1, 50, -17],
 							],
 						},
 						source: "charity",
@@ -432,7 +432,7 @@
 							type: "Flowchart",
 							options: {
 								stub: "0",
-								midpoint: "0.3",
+								midpoint: "0.25",
 								cornerRadius: "15",
 							},
 						},
@@ -520,6 +520,11 @@
 				"four-one . . four-two"
 				"five-one five-two five-three five-four";
 			grid-gap: 2rem;
+
+			@media only screen and (max-width: 1200px) {
+				width: 90%;
+				height: 35vh;
+			}
 
 			.chart__item {
 				position: relative;
