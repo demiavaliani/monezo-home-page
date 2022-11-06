@@ -49,10 +49,37 @@
 			align-items: center;
 		}
 
+		@media only screen and (min-width: 1920px) {
+			height: 82%;
+			min-height: 82vh;
+		}
+
+		@media only screen and (max-width: 1512px) {
+			height: 79%;
+			min-height: 79vh;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			height: 86%;
+			min-height: 86vh;
+		}
+
+		@media only screen and (max-width: 1024px) {
+			height: 85%;
+			min-height: 85vh;
+		}
+
+		@media only screen and (max-width: 768px) {
+			height: 84%;
+			min-height: 84vh;
+		}
+
 		@media only screen and (max-width: 584px) {
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: center;
+			height: 80%;
+			min-height: 80vh;
 		}
 
 		&__left-description {
@@ -73,6 +100,10 @@
 				width: 70%;
 			}
 
+			@media only screen and (max-width: 320px) {
+				padding: 3rem 0 4rem;
+			}
+
 			& .text {
 				margin-bottom: 3.6rem;
 				text-align: left;
@@ -85,18 +116,26 @@
 					text-align: center;
 				}
 
+				@media only screen and (max-width: 320px) {
+					margin-bottom: 2rem;
+				}
+
 				&--large {
 					font-family: "Syne";
 					font-size: 6.4rem;
 					font-weight: 700;
 					color: $monezo-lima-green;
 
+					@media only screen and (max-width: 584px) {
+						font-size: 5rem;
+					}
+
 					@media only screen and (max-width: 416px) {
 						font-size: 4rem;
 					}
 
 					@media only screen and (max-width: 320px) {
-						font-size: 3rem;
+						font-size: 2.7rem;
 					}
 				}
 
@@ -106,8 +145,12 @@
 					font-weight: 400;
 					color: $monezo-white;
 
-					@media only screen and (max-width: 320px) {
+					@media only screen and (max-width: 584px) {
 						font-size: 1.6rem;
+					}
+
+					@media only screen and (max-width: 320px) {
+						font-size: 1.4rem;
 					}
 				}
 			}
@@ -120,7 +163,7 @@
 			width: 37%;
 
 			@media only screen and (min-height: 1400px) {
-				width: 60%;
+				width: 70%;
 			}
 
 			@media only screen and (max-width: 1024px) {
@@ -128,7 +171,19 @@
 			}
 
 			@media only screen and (max-width: 584px) {
-				width: 70%;
+				width: 65%;
+			}
+
+			@media only screen and (max-width: 416px) {
+				width: 72%;
+			}
+
+			@media only screen and (max-width: 390px) {
+				width: 66%;
+			}
+
+			@media only screen and (max-width: 320px) {
+				width: 55%;
 			}
 
 			img {
