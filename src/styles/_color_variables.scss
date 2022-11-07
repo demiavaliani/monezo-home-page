@@ -1,0 +1,80 @@
+/* STATIC COLORS */
+$monezo-white: #ffffff;
+$monezo-black: #000000;
+$monezo-lima-green: #5ce517;
+$monezo-dusty-grey: #999999;
+$monezo-dove-grey: #666666;
+$monezo-persian-blue: #1739e5;
+$monezo-purple-heart: #5c17e5;
+$monezo-bilbao-green: #36860d;
+$monezo-torea-bay: #0d2186;
+$monezo-blue-gem: #360d86;
+$monezo-tundora: #444444;
+$monezo-concrete: #f2f2f2;
+$monezo-emperor: #555555;
+$monezo-royal-blue: #496df2;
+$monezo-perano: #afbff5;
+$monezo-gossip: #c6f5af;
+$monezo-jaffa-oragne: #f29849;
+$monezo-apricot-peach: #f9d2ae;
+$monezo-venetian-red: #f24981;
+$monezo-lavender-pink: #fcb6ce;
+$monezo-periwinkle: #ccd4ff;
+$monezo-snowy-mint: #ccffd2;
+$monezo-pizazz: #ff9500;
+$monezo-fog: #ddccff;
+
+/* BUTTON GRADIENTS */
+$monezo-gradient-button-primary-bg-blue-hover: linear-gradient(
+	90deg,
+	#6dea2e 0%,
+	#bef6a2 100%
+);
+
+$monezo-gradient-button-primary-bg-blue-pressed: linear-gradient(
+	90deg,
+	#54d115 0%,
+	#8eef5d 100%
+);
+
+$monezo-gradient-button-primary-bg-red-hover: linear-gradient(
+	90deg,
+	#5d75ef 0%,
+	#8b9cf3 100%
+);
+
+$monezo-gradient-button-primary-bg-red-pressed: linear-gradient(
+	90deg,
+	#2e4dea 0%,
+	#5d75ee 100%
+);
+
+$monezo-gradient-button-primary-bg-brown-hover: linear-gradient(
+	90deg,
+	#8e5def 0%,
+	#ae8bf3 100%
+);
+
+$monezo-gradient-button-primary-bg-brown-pressed: linear-gradient(
+	90deg,
+	#6d2eea 0%,
+	#8e5dee 100%
+);
+
+$monezo-gradient-button-navigation-static: linear-gradient(
+	90deg,
+	#f84984 0%,
+	#f08e35 100%
+);
+
+$monezo-gradient-button-navigation-hover: linear-gradient(
+	90deg,
+	#f96c9b 0%,
+	#f29f54 100%
+);
+
+$monezo-gradient-button-navigation-pressed: linear-gradient(
+	90deg,
+	#f61863 0%,
+	#df7311 100%
+);
