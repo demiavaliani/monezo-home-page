@@ -82,6 +82,16 @@
 			min-height: 80vh;
 		}
 
+		@media only screen and (max-width: 430px) {
+			height: 85%;
+			min-height: 85vh;
+		}
+
+		@media only screen and (max-width: 320px) {
+			height: 80%;
+			min-height: 80vh;
+		}
+
 		&__left-description {
 			box-sizing: border-box;
 			display: flex;
@@ -100,6 +110,10 @@
 				width: 70%;
 			}
 
+			@media only screen and (max-width: 360px) {
+				padding: 2rem 0 3rem;
+			}
+
 			@media only screen and (max-width: 320px) {
 				padding: 3rem 0 4rem;
 			}
@@ -114,6 +128,10 @@
 
 				@media only screen and (max-width: 584px) {
 					text-align: center;
+				}
+
+				@media only screen and (max-width: 360px) {
+					margin-bottom: 2rem;
 				}
 
 				@media only screen and (max-width: 320px) {
@@ -178,8 +196,16 @@
 				width: 72%;
 			}
 
+			@media only screen and (max-width: 430px) {
+				width: 60%;
+			}
+
 			@media only screen and (max-width: 390px) {
 				width: 66%;
+			}
+
+			@media only screen and (max-width: 360px) {
+				width: 60%;
 			}
 
 			@media only screen and (max-width: 320px) {

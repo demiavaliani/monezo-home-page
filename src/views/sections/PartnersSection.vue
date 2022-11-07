@@ -64,13 +64,37 @@
 		}
 
 		@media only screen and (max-width: 1024px) {
-			--gap: 100rem;
+			--gap: 45rem;
 			position: relative;
 			overflow: hidden;
 			user-select: none;
 			gap: var(--gap);
 			height: 7%;
 			min-height: 7vh;
+
+			@media only screen and (max-width: 1024px) {
+				--gap: 110rem;
+			}
+
+			@media only screen and (max-width: 834px) {
+				--gap: 85rem;
+			}
+
+			@media only screen and (max-width: 584px) {
+				--gap: 60rem;
+			}
+
+			@media only screen and (max-width: 430px) {
+				--gap: 45rem;
+			}
+
+			@media only screen and (max-width: 390px) {
+				--gap: 40rem;
+			}
+
+			@media only screen and (max-width: 320px) {
+				--gap: 35rem;
+			}
 
 			.logos-wrapper {
 				flex-shrink: 0;
@@ -85,8 +109,8 @@
 					animation-duration: 20s;
 				}
 
-				@media only screen and (max-width: 416px) {
-					animation-duration: 25s;
+				@media only screen and (max-width: 834px) {
+					animation-duration: 15s;
 				}
 			}
 
